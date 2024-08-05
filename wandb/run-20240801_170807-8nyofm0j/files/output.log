@@ -1,0 +1,16 @@
+/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py:51: DeprecationWarning: This function is deprecated. Please call randint(1, 32 + 1) instead
+  sigma_ind_list = np.random.random_integers(low=1,high=num_levels,size=data.size(0))
+/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py:231: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  mask = torch.tensor(mask, dtype=torch.float32).to(device)
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 124, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 73, in fit
+    score_batch = model(train_noise_adj_b_chunked[i].unsqueeze(0).to(device), train_noise_adj_b_chunked[i].to(device), mask, sigma.item()).to(device)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 124, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 73, in fit
+    score_batch = model(train_noise_adj_b_chunked[i].unsqueeze(0).to(device), train_noise_adj_b_chunked[i].to(device), mask, sigma.item()).to(device)
+KeyboardInterrupt

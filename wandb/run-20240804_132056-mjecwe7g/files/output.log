@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 106, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 56, in fit
+    l += loss_cycle_consistency(score_batch.squeeze(-1), A, sigma.item(),  device, grid_shape=(4, 4))
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 194, in loss_cycle_consistency
+    G = nx.from_numpy_matrix(graph.numpy())
+TypeError: can't convert mps:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 106, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 56, in fit
+    l += loss_cycle_consistency(score_batch.squeeze(-1), A, sigma.item(),  device, grid_shape=(4, 4))
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 194, in loss_cycle_consistency
+    G = nx.from_numpy_matrix(graph.numpy())
+TypeError: can't convert mps:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.

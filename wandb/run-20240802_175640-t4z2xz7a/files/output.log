@@ -1,0 +1,37 @@
+torch.Size([16, 25, 25])
+torch.Size([400, 25])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+tensor(0.3253, device='mps:0')
+<class 'torch.Tensor'>
+torch.Size([25, 25]) A.size()
+torch.Size([25, 25, 1]) torch.Size([25, 25, 1])
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 112, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 61, in fit
+    score_batch = model(A, train_noise_adj_b_chunked[i].to(device), mask, sigma.item()).to(device)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 258, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 285, in forward_cat
+    noise_level_matrix = noiselevel.expand(u.size(0), u.size(1), u.size(3)).to(
+IndexError: Dimension out of range (expected to be in range of [-3, 2], but got 3)
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 112, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 61, in fit
+    score_batch = model(A, train_noise_adj_b_chunked[i].to(device), mask, sigma.item()).to(device)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 258, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 285, in forward_cat
+    noise_level_matrix = noiselevel.expand(u.size(0), u.size(1), u.size(3)).to(
+IndexError: Dimension out of range (expected to be in range of [-3, 2], but got 3)

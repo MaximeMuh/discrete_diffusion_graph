@@ -1,0 +1,42 @@
+torch.Size([16, 1, 25, 25]) train_adj_b_noisy_matrix
+torch.Size([16]) sigma_list
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 74, in <module>
+    fit(model, optimizer, dataloader, max_epoch=100, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 48, in fit
+    score = model(train_adj_b_noisy_matrix, sigma_list)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/unet.py", line 247, in forward
+    x = self.init_conv(x)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 458, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 454, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [20, 3, 7, 7], expected input[16, 1, 25, 25] to have 3 channels, but got 1 channels instead
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 74, in <module>
+    fit(model, optimizer, dataloader, max_epoch=100, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 48, in fit
+    score = model(train_adj_b_noisy_matrix, sigma_list)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/unet.py", line 247, in forward
+    x = self.init_conv(x)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 458, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 454, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [20, 3, 7, 7], expected input[16, 1, 25, 25] to have 3 channels, but got 1 channels instead

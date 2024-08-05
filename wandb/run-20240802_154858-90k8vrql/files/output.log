@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 97, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 41, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj = discretenoise(data, sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 115, in discretenoise
+    batch_size, num_elements = train_adj_b_vec.size()
+ValueError: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 97, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 41, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj = discretenoise(data, sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 115, in discretenoise
+    batch_size, num_elements = train_adj_b_vec.size()
+ValueError: too many values to unpack (expected 2)

@@ -1,0 +1,29 @@
+/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:232: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/100, Loss: 0.20406533032655716
+Epoch 2/100, Loss: 0.1336253611370921
+Epoch 3/100, Loss: 0.12775426171720028
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 101, in <module>
+    fit(model, optimizer, dataloader, max_epoch=100, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 56, in fit
+    l.backward()
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/autograd/graph.py", line 768, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 101, in <module>
+    fit(model, optimizer, dataloader, max_epoch=100, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 56, in fit
+    l.backward()
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/autograd/graph.py", line 768, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

@@ -1,0 +1,122 @@
+/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py:284: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  mask = torch.tensor(mask, dtype=torch.float32).to(device)
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 102, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 50, in fit
+    score_batch = model(train_noise_adj_b_chunked[i].unsqueeze(0).to(device), train_noise_adj_b_chunked[i].to(device), mask, sigma.item()).to(device)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 258, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 307, in forward_cat
+    u = masked_instance_norm2D(u, mask)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/util/model_helper.py", line 182, in masked_instance_norm2D
+    mean = (torch.sum(x * mask, dim=[1,2]) / torch.sum(mask, dim=[1,2]))   # (N,C)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 102, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 50, in fit
+    score_batch = model(train_noise_adj_b_chunked[i].unsqueeze(0).to(device), train_noise_adj_b_chunked[i].to(device), mask, sigma.item()).to(device)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 258, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 307, in forward_cat
+    u = masked_instance_norm2D(u, mask)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/util/model_helper.py", line 182, in masked_instance_norm2D
+    mean = (torch.sum(x * mask, dim=[1,2]) / torch.sum(mask, dim=[1,2]))   # (N,C)
+KeyboardInterrupt
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>
+<class 'builtin_function_or_method'>

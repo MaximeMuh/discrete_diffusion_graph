@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 106, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 56, in fit
+    l += loss_cycle_consistency(score_batch.squeeze(-1), A, sigma.item(),  device, grid_shape=(4, 4))
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 189, in loss_cycle_consistency
+    noisy_adjs, init_adjs = take_step(model_noise, init_adjs, noiselevel, device, grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 173, in take_step
+    init_adjs = add_bernoulli( init_adjs, noiselevel)
+TypeError: add_bernoulli() missing 2 required positional arguments: 'device' and 'grid_shape'
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 106, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 56, in fit
+    l += loss_cycle_consistency(score_batch.squeeze(-1), A, sigma.item(),  device, grid_shape=(4, 4))
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 189, in loss_cycle_consistency
+    noisy_adjs, init_adjs = take_step(model_noise, init_adjs, noiselevel, device, grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 173, in take_step
+    init_adjs = add_bernoulli( init_adjs, noiselevel)
+TypeError: add_bernoulli() missing 2 required positional arguments: 'device' and 'grid_shape'

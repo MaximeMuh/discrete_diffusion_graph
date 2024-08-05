@@ -1,0 +1,227 @@
+<class 'float'>
+0.4851694107055664
+<class 'float'>
+0.45556122064590454
+<class 'float'>
+0.15009890496730804
+<class 'float'>
+0.06382185965776443
+<class 'float'>
+0.46567854285240173
+<class 'float'>
+0.27465951442718506
+<class 'float'>
+0.21236471831798553
+<class 'float'>
+0.21279633045196533
+<class 'float'>
+0.13190479576587677
+<class 'float'>
+0.41738656163215637
+<class 'float'>
+0.31420090794563293
+<class 'float'>
+0.43279337882995605
+<class 'float'>
+0.03712379187345505
+<class 'float'>
+0.15072251856327057
+<class 'float'>
+0.31319549679756165
+<class 'float'>
+0.436018168926239
+<class 'float'>
+0.312153697013855
+<class 'float'>
+0.19954951107501984
+<class 'float'>
+0.25630491971969604
+<class 'float'>
+0.23833991587162018
+<class 'float'>
+0.12300604581832886
+<class 'float'>
+0.2488674819469452
+<class 'float'>
+0.06908442825078964
+<class 'float'>
+0.002378944307565689
+<class 'float'>
+0.49782833456993103
+<class 'float'>
+0.14364215731620789
+<class 'float'>
+0.4584285318851471
+<class 'float'>
+0.18513138592243195
+<class 'float'>
+0.32435980439186096
+<class 'float'>
+0.12938028573989868
+<class 'float'>
+0.19176051020622253
+<class 'float'>
+0.3438127934932709
+<class 'float'>
+0.008141147904098034
+<class 'float'>
+0.08249563723802567
+<class 'float'>
+0.0957811027765274
+<class 'float'>
+0.15549615025520325
+<class 'float'>
+0.4444983899593353
+<class 'float'>
+0.3303660452365875
+<class 'float'>
+0.39236801862716675
+<class 'float'>
+0.48132994771003723
+<class 'float'>
+0.33989980816841125
+<class 'float'>
+0.4340348243713379
+<class 'float'>
+0.2701120972633362
+<class 'float'>
+0.13533814251422882
+<class 'float'>
+0.4383108913898468
+<class 'float'>
+0.4593838155269623
+<class 'float'>
+0.06604807078838348
+<class 'float'>
+0.44898906350135803
+<class 'float'>
+0.34898585081100464
+<class 'float'>
+0.4529470205307007
+<class 'float'>
+0.4672909080982208
+<class 'float'>
+0.4345451295375824
+<class 'float'>
+0.37532275915145874
+<class 'float'>
+0.22041794657707214
+<class 'float'>
+0.18305593729019165
+<class 'float'>
+0.05984332412481308
+<class 'float'>
+0.3374006748199463
+<class 'float'>
+0.27147892117500305
+<class 'float'>
+0.09744533896446228
+<class 'float'>
+0.24297867715358734
+<class 'float'>
+0.3837965428829193
+<class 'float'>
+0.27358314394950867
+<class 'float'>
+0.289102166891098
+<class 'float'>
+0.29344865679740906
+<class 'float'>
+0.14783556759357452
+<class 'float'>
+0.1135588064789772
+<class 'float'>
+0.22629019618034363
+<class 'float'>
+0.45967069268226624
+<class 'float'>
+0.4434843957424164
+<class 'float'>
+0.02162882499396801
+<class 'float'>
+0.22404687106609344
+<class 'float'>
+0.33457058668136597
+<class 'float'>
+0.37041378021240234
+<class 'float'>
+0.22545474767684937
+<class 'float'>
+0.4608915448188782
+<class 'float'>
+0.41996872425079346
+<class 'float'>
+0.01863531582057476
+<class 'float'>
+0.3450845777988434
+<class 'float'>
+0.3656799793243408
+<class 'float'>
+0.4098722040653229
+<class 'float'>
+0.28823649883270264
+<class 'float'>
+0.17808614671230316
+<class 'float'>
+0.229243203997612
+<class 'float'>
+0.32894882559776306
+<class 'float'>
+0.41350340843200684
+<class 'float'>
+0.3253309726715088
+<class 'float'>
+0.3103604316711426
+<class 'float'>
+0.37157461047172546
+<class 'float'>
+0.12340843677520752
+<class 'float'>
+0.39443063735961914
+<class 'float'>
+0.3731628954410553
+<class 'float'>
+0.46683230996131897
+<class 'float'>
+0.03904014080762863
+<class 'float'>
+0.17006529867649078
+<class 'float'>
+0.06773526221513748
+<class 'float'>
+0.38269585371017456
+<class 'float'>
+0.41464436054229736
+<class 'float'>
+0.4609393775463104
+<class 'float'>
+0.13494732975959778
+<class 'float'>
+0.36211860179901123
+<class 'float'>
+0.17333422601222992
+<class 'float'>
+0.3032377362251282
+<class 'float'>
+0.2712400257587433
+<class 'float'>
+0.3733498752117157
+/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py:284: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  mask = torch.tensor(mask, dtype=torch.float32).to(device)
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 103, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 50, in fit
+    print(sigma.item())
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 103, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 50, in fit
+    print(sigma.item())
+KeyboardInterrupt
+<class 'float'>
+0.20758873224258423
+<class 'float'>
+0.3699648380279541
+<class 'float'>

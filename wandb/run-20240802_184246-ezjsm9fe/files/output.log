@@ -1,0 +1,358 @@
+<class 'float'>
+0.39079412817955017
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.3038901388645172
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.3098601996898651
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.10828214883804321
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.22108660638332367
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.482185423374176
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.4940842390060425
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.22337299585342407
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.024598581716418266
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.2625645399093628
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.38698330521583557
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.2575364112854004
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.3787592947483063
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.19555392861366272
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+5.617105489363894e-05
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.16136038303375244
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.108615942299366
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.14013086259365082
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.33757930994033813
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.253226101398468
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.08946455270051956
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.02288823015987873
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.09157510101795197
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.017251737415790558
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.08740276843309402
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.2548264265060425
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.07768537849187851
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.41082602739334106
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.282696932554245
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.42181116342544556
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.233453169465065
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.25188323855400085
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.4578225612640381
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.18801230192184448
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.317324161529541
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.2622950077056885
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.21883031725883484
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.08441280573606491
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.36888301372528076
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.16811348497867584
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.18230122327804565
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.4569009244441986
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.40050673484802246
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.11544116586446762
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.44355636835098267
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.0535896010696888
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.07375609129667282
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.32757100462913513
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.0031266817823052406
+torch.Size([1, 1, 16, 16]) a
+torch.Size([1, 16, 16]) b
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py:284: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  mask = torch.tensor(mask, dtype=torch.float32).to(device)
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 107, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 50, in fit
+    print(sigma.item())
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 107, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 50, in fit
+    print(sigma.item())
+KeyboardInterrupt

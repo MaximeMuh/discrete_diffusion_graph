@@ -1,0 +1,18 @@
+64
+<class 'list'>
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 100, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 44, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj = discretenoise_adj(data, sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 103, in discretenoise_adj
+    bernoulli_adj = torch.where(train_adj_b>1/2,torch.full_like(train_adj_b,1-sigma).to(device),torch.full_like(train_adj_b,sigma).to(device))
+TypeError: unsupported operand type(s) for -: 'int' and 'list'
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 100, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 44, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj = discretenoise_adj(data, sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 103, in discretenoise_adj
+    bernoulli_adj = torch.where(train_adj_b>1/2,torch.full_like(train_adj_b,1-sigma).to(device),torch.full_like(train_adj_b,sigma).to(device))
+TypeError: unsupported operand type(s) for -: 'int' and 'list'

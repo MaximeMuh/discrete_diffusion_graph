@@ -1,0 +1,41 @@
+/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py:51: DeprecationWarning: This function is deprecated. Please call randint(1, 32 + 1) instead
+  sigma_ind_list = np.random.random_integers(low=1,high=num_levels,size=data.size(0))
+/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py:231: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  mask = torch.tensor(mask, dtype=torch.float32).to(device)
+/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:232: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/40, Loss: 263.46056795877126
+Epoch 2/40, Loss: 218.68094417027064
+Epoch 3/40, Loss: 184.81170630076574
+Epoch 4/40, Loss: 166.91985666184198
+Epoch 5/40, Loss: 133.56360978928822
+Epoch 6/40, Loss: 103.92373030526298
+Epoch 7/40, Loss: 99.76005218142555
+Epoch 8/40, Loss: 83.45300035628061
+Epoch 9/40, Loss: 79.46073616875543
+Epoch 10/40, Loss: 73.13243944682772
+Epoch 11/40, Loss: 58.720786594209216
+Epoch 12/40, Loss: 58.891558632018075
+Epoch 13/40, Loss: 53.746020816621325
+Epoch 14/40, Loss: nan
+Epoch 15/40, Loss: nan
+Epoch 16/40, Loss: nan
+Epoch 17/40, Loss: nan
+Epoch 18/40, Loss: nan
+Epoch 19/40, Loss: nan
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 130, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 79, in fit
+    data = upper_flatten_to_adj_matrix(data, width * height)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 120, in upper_flatten_to_adj_matrix
+    adj_matrix[b, idx[0], idx[1]] = vector[b]
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 130, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 79, in fit
+    data = upper_flatten_to_adj_matrix(data, width * height)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 120, in upper_flatten_to_adj_matrix
+    adj_matrix[b, idx[0], idx[1]] = vector[b]
+KeyboardInterrupt

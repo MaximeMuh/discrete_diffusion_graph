@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 101, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 45, in fit
+    print(grad_log_noise_adj.shape)
+AttributeError: 'list' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 101, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 45, in fit
+    print(grad_log_noise_adj.shape)
+AttributeError: 'list' object has no attribute 'shape'
+torch.Size([4096, 16, 16])

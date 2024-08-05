@@ -1,0 +1,22 @@
+/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:232: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/20, Loss: 0.24858500622212887
+Epoch 2/20, Loss: 0.2336203893646598
+Epoch 3/20, Loss: 0.2243068004027009
+Epoch 4/20, Loss: 0.20175390969961882
+Epoch 5/20, Loss: 0.19186538457870483
+Epoch 6/20, Loss: 0.16075761057436466
+Epoch 7/20, Loss: 0.13014912325888872
+Epoch 8/20, Loss: 0.10015090275555849
+Epoch 9/20, Loss: 0.0764914620667696
+Epoch 10/20, Loss: 0.06585485255345702
+Epoch 11/20, Loss: 0.058037326438352466
+Epoch 12/20, Loss: 0.05344822001643479
+Epoch 13/20, Loss: 0.04883010149933398
+Epoch 14/20, Loss: 0.04817157448269427
+Epoch 15/20, Loss: 0.04928978439420462
+Epoch 16/20, Loss: 0.046276534674689174
+Epoch 17/20, Loss: 0.043800459476187825
+Epoch 18/20, Loss: 0.045664913952350616
+Epoch 19/20, Loss: 0.04452286730520427
+Epoch 20/20, Loss: 0.044023232301697135

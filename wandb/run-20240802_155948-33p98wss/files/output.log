@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 101, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 43, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj = gen_list_of_data(data, sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 30, in gen_list_of_data
+    train_noise_adj_b, grad_log_q_noise = discretenoise(train_adj_b, sigma=sigma_i, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 146, in discretenoise
+    batch_size, num_elements = train_adj_b_vec.size()
+ValueError: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 101, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 43, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj = gen_list_of_data(data, sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 30, in gen_list_of_data
+    train_noise_adj_b, grad_log_q_noise = discretenoise(train_adj_b, sigma=sigma_i, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 146, in discretenoise
+    batch_size, num_elements = train_adj_b_vec.size()
+ValueError: too many values to unpack (expected 2)

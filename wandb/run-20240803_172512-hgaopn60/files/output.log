@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 42, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj_list = gen_list_of_data_single_neigh(data, sigma_list, device, grid_shape=(5, 5))
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 58, in gen_list_of_data_single_neigh
+    train_noise_adj_b, grad_log_q_noise = discretenoise_adj_neigh(train_adj_b[count],sigma=sigma_i, device=device, grid_shape=grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 180, in discretenoise_adj_neigh
+    noise = noise * torch.tensor(adjacency_mask, dtype=torch.float32).to(device)
+RuntimeError: The size of tensor a (16) must match the size of tensor b (25) at non-singleton dimension 1
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 42, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj_list = gen_list_of_data_single_neigh(data, sigma_list, device, grid_shape=(5, 5))
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 58, in gen_list_of_data_single_neigh
+    train_noise_adj_b, grad_log_q_noise = discretenoise_adj_neigh(train_adj_b[count],sigma=sigma_i, device=device, grid_shape=grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 180, in discretenoise_adj_neigh
+    noise = noise * torch.tensor(adjacency_mask, dtype=torch.float32).to(device)
+RuntimeError: The size of tensor a (16) must match the size of tensor b (25) at non-singleton dimension 1

@@ -1,0 +1,40 @@
+torch.Size([16, 1, 25, 25]) train_adj_b_noisy_matrix
+torch.Size([16]) sigma_list
+torch.Size([16, 1, 25, 25]) train_adj_b_noisy_matrix
+torch.Size([16, 1, 26, 26]) score
+torch.Size([16, 26, 26]) score
+torch.Size([16, 325]) score
+torch.Size([16, 300]) grad_log_noise_vec
+torch.Size([16]) sigma_list
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 82, in <module>
+    fit(model, optimizer, dataloader, max_epoch=100, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 58, in fit
+    l = loss_func_bce(score, grad_log_noise_vec, sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 21, in loss_func_bce
+    loss_matrix = BCE(score_list, grad_log_noise_vec)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 734, in forward
+    return F.binary_cross_entropy_with_logits(input, target,
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/functional.py", line 3242, in binary_cross_entropy_with_logits
+    raise ValueError(f"Target size ({target.size()}) must be the same as input size ({input.size()})")
+ValueError: Target size (torch.Size([16, 300])) must be the same as input size (torch.Size([16, 325]))
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 82, in <module>
+    fit(model, optimizer, dataloader, max_epoch=100, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 58, in fit
+    l = loss_func_bce(score, grad_log_noise_vec, sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 21, in loss_func_bce
+    loss_matrix = BCE(score_list, grad_log_noise_vec)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 734, in forward
+    return F.binary_cross_entropy_with_logits(input, target,
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/functional.py", line 3242, in binary_cross_entropy_with_logits
+    raise ValueError(f"Target size ({target.size()}) must be the same as input size ({input.size()})")
+ValueError: Target size (torch.Size([16, 300])) must be the same as input size (torch.Size([16, 325]))

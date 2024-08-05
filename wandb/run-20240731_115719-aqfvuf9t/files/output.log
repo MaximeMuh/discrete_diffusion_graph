@@ -1,0 +1,18 @@
+torch.Size([16, 1, 25, 25]) train_adj_b_noisy_matrix
+torch.Size([16]) sigma_list
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 74, in <module>
+    fit(model, optimizer, dataloader, max_epoch=100, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 49, in fit
+    score = adj_matrix_to_upper_flatten(score)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 72, in adj_matrix_to_upper_flatten
+    batch_size, num_nodes, _ = adj_matrix.size()
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 74, in <module>
+    fit(model, optimizer, dataloader, max_epoch=100, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py", line 49, in fit
+    score = adj_matrix_to_upper_flatten(score)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 72, in adj_matrix_to_upper_flatten
+    batch_size, num_nodes, _ = adj_matrix.size()
+ValueError: too many values to unpack (expected 3)

@@ -1,0 +1,16 @@
+torch.Size([64, 16, 16])
+torch.Size([1024, 16])
+torch.Size([1, 16, 16])
+torch.Size([16, 16])
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 108, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 51, in fit
+    print(mask.size())
+UnboundLocalError: local variable 'mask' referenced before assignment
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 108, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 51, in fit
+    print(mask.size())
+UnboundLocalError: local variable 'mask' referenced before assignment

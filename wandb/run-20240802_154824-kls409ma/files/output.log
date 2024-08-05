@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 97, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 41, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj = discretenoise(data, sigma_list, device, grid_shape=(4, 4))
+TypeError: discretenoise() got an unexpected keyword argument 'grid_shape'
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 97, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 41, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj = discretenoise(data, sigma_list, device, grid_shape=(4, 4))
+TypeError: discretenoise() got an unexpected keyword argument 'grid_shape'

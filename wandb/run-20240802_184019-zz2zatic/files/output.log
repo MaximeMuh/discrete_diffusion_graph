@@ -1,0 +1,320 @@
+/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py:284: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  mask = torch.tensor(mask, dtype=torch.float32).to(device)
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 103, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 51, in fit
+    score_batch = model(train_noise_adj_b_chunked[i].unsqueeze(0).to(device), train_noise_adj_b_chunked[i].to(device), mask, sigma.item()).to(device)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 259, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 305, in forward_cat
+    u = conv(u, mask) + (u if self.residual else 0)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 58, in forward
+    out1 = self.m1(x).permute(0, 3, 1, 2) * mask  # batch, out_feat, N, N
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 799, in forward
+    return F.leaky_relu(input, self.negative_slope, self.inplace)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/functional.py", line 1677, in leaky_relu
+    result = torch._C._nn.leaky_relu(input, negative_slope)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 103, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple.py", line 51, in fit
+    score_batch = model(train_noise_adj_b_chunked[i].unsqueeze(0).to(device), train_noise_adj_b_chunked[i].to(device), mask, sigma.item()).to(device)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 259, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 305, in forward_cat
+    u = conv(u, mask) + (u if self.residual else 0)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/model/model2.py", line 58, in forward
+    out1 = self.m1(x).permute(0, 3, 1, 2) * mask  # batch, out_feat, N, N
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 799, in forward
+    return F.leaky_relu(input, self.negative_slope, self.inplace)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/functional.py", line 1677, in leaky_relu
+    result = torch._C._nn.leaky_relu(input, negative_slope)
+KeyboardInterrupt
+<class 'float'>
+0.049606479704380035
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.30336225032806396
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.05743901804089546
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.00292792241089046
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.4955194592475891
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.39171963930130005
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.27194729447364807
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.014427362941205502
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.3709605932235718
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.18837253749370575
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.20964005589485168
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.17628143727779388
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.07050520181655884
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.2426360845565796
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.14437665045261383
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.4134080708026886
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.06402730196714401
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.3815234899520874
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.15088048577308655
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.4168860614299774
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.47532564401626587
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.37028181552886963
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.27274090051651
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.1558399796485901
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.4724728763103485
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.32740670442581177
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.06636794656515121
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.20524302124977112
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.42791756987571716
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.49742844700813293
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.3654991090297699
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.41795551776885986
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.4985659718513489
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.15477502346038818
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.16841311752796173
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.13294658064842224
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.256258487701416
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.27134445309638977
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.3876945376396179
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.03156589716672897
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.1354988068342209
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.24150772392749786
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.28719890117645264
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.18090054392814636
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.3248712122440338
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.46791040897369385
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.12014876306056976
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.44665998220443726
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.3559447228908539
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])
+<class 'float'>
+0.2677541673183441
+torch.Size([1, 16, 16]) Aaaa.size()
+torch.Size([1, 16, 16]) A.size()
+torch.Size([1, 16, 16, 1]) torch.Size([1, 16, 16, 1])

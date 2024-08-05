@@ -1,0 +1,44 @@
+/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py:102: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+Epoch 1/40, Loss: 0.09735489051256861
+/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:232: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 2/40, Loss: 0.0653311259571522
+Epoch 3/40, Loss: 0.0635933123292431
+Epoch 4/40, Loss: 0.06330781163913864
+Epoch 5/40, Loss: 0.06305292443860144
+Epoch 6/40, Loss: 0.06221847171111712
+Epoch 7/40, Loss: 0.06110917770909884
+Epoch 8/40, Loss: 0.06217672238274226
+Epoch 9/40, Loss: 0.06004833205351754
+Epoch 10/40, Loss: 0.06132378801703453
+Epoch 11/40, Loss: 0.05901938298391917
+Epoch 12/40, Loss: 0.06183166169221439
+Epoch 13/40, Loss: 0.06147260041463943
+Epoch 14/40, Loss: 0.06247942729128732
+Epoch 15/40, Loss: 0.06140279811289576
+Epoch 16/40, Loss: 0.06152433860633108
+Epoch 17/40, Loss: 0.06188687599367566
+Epoch 18/40, Loss: 0.061662022320051045
+Epoch 19/40, Loss: 0.06077936469089417
+Epoch 20/40, Loss: 0.05949989381054091
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 42, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj_list = gen_list_of_data_single_neigh(data, sigma_list, device, grid_shape=(4, 4))
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 58, in gen_list_of_data_single_neigh
+    train_noise_adj_b, grad_log_q_noise = discretenoise_adj_neigh(train_adj_b[count],sigma=sigma_i, device=device, grid_shape=grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 175, in discretenoise_adj_neigh
+    bernoulli_adj = torch.where(train_adj_b>1/2,torch.full_like(train_adj_b,1-sigma).to(device),torch.full_like(train_adj_b,sigma).to(device))
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 42, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj_list = gen_list_of_data_single_neigh(data, sigma_list, device, grid_shape=(4, 4))
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 58, in gen_list_of_data_single_neigh
+    train_noise_adj_b, grad_log_q_noise = discretenoise_adj_neigh(train_adj_b[count],sigma=sigma_i, device=device, grid_shape=grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 175, in discretenoise_adj_neigh
+    bernoulli_adj = torch.where(train_adj_b>1/2,torch.full_like(train_adj_b,1-sigma).to(device),torch.full_like(train_adj_b,sigma).to(device))
+KeyboardInterrupt

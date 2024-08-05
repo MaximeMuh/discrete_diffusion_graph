@@ -1,0 +1,120 @@
+/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py:51: DeprecationWarning: This function is deprecated. Please call randint(1, 32 + 1) instead
+  sigma_ind_list = np.random.random_integers(low=1,high=num_levels,size=data.size(0))
+/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py:231: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  mask = torch.tensor(mask, dtype=torch.float32).to(device)
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 123, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 81, in fit
+    loss = loss_func_kld(score, torch.stack(train_noise_adj_b_chunked), data, grad_log_q_noise_list, sigma_list,sigma_ind_list,sigma_nontild_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 54, in loss_func_kld
+    xor = torch.logical_xor(train_noise_adj_b[i], train_adj_b[i])
+RuntimeError: The size of tensor a (16) must match the size of tensor b (120) at non-singleton dimension 2
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 123, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_vlb.py", line 81, in fit
+    loss = loss_func_kld(score, torch.stack(train_noise_adj_b_chunked), data, grad_log_q_noise_list, sigma_list,sigma_ind_list,sigma_nontild_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 54, in loss_func_kld
+    xor = torch.logical_xor(train_noise_adj_b[i], train_adj_b[i])
+RuntimeError: The size of tensor a (16) must match the size of tensor b (120) at non-singleton dimension 2
+tensor([[1., 0., 0.,  ..., 0., 0., 1.],
+        [0., 0., 0.,  ..., 1., 0., 0.],
+        [1., 0., 0.,  ..., 1., 0., 1.],
+        ...,
+        [1., 0., 0.,  ..., 1., 0., 0.],
+        [1., 0., 0.,  ..., 0., 0., 1.],
+        [1., 0., 0.,  ..., 1., 0., 1.]], device='mps:0') train_adj_b_noisy_vec
+tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [1., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 1., 0., 0.]], device='mps:0') grad_log_noise_vec
+tensor([[[0., 1., 0.,  ..., 0., 0., 0.],
+         [1., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 1.],
+         [0., 0., 0.,  ..., 0., 1., 0.]],
+        [[0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 1.,  ..., 0., 0., 0.],
+         [0., 1., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 1., 0.],
+         [0., 0., 0.,  ..., 1., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.]],
+        [[0., 1., 0.,  ..., 0., 0., 0.],
+         [1., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 1., 0.],
+         [0., 0., 0.,  ..., 1., 0., 1.],
+         [0., 0., 0.,  ..., 0., 1., 0.]],
+        ...,
+        [[0., 1., 0.,  ..., 0., 0., 0.],
+         [1., 0., 1.,  ..., 0., 0., 0.],
+         [0., 1., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 1., 0.],
+         [0., 0., 0.,  ..., 1., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.]],
+        [[0., 1., 0.,  ..., 0., 0., 0.],
+         [1., 0., 1.,  ..., 0., 0., 0.],
+         [0., 1., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 1.],
+         [0., 0., 0.,  ..., 0., 1., 0.]],
+        [[0., 1., 0.,  ..., 0., 0., 0.],
+         [1., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 1., 0.],
+         [0., 0., 0.,  ..., 1., 0., 1.],
+         [0., 0., 0.,  ..., 0., 1., 0.]]], device='mps:0') train_adj_b_noisy_matrix
+tensor([[[0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.]],
+        [[0., 1., 0.,  ..., 0., 0., 0.],
+         [1., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 1., 0.],
+         [0., 0., 0.,  ..., 1., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.]],
+        [[0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 1.,  ..., 0., 0., 0.],
+         [0., 1., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.]],
+        ...,
+        [[0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.]],
+        [[0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 1.,  ..., 0., 0., 0.],
+         [0., 1., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.]],
+        [[0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         ...,
+         [0., 0., 0.,  ..., 0., 1., 0.],
+         [0., 0., 0.,  ..., 1., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.]]], device='mps:0') grad_log_q_noise_list

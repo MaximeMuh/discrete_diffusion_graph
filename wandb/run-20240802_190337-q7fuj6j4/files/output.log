@@ -1,0 +1,32 @@
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 108, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 61, in fit
+    l = loss_func_bce_adj(score, torch.stack(grad_log_noise_adj_list), sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 74, in loss_func_bce_adj
+    loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+TypeError: Cannot convert a MPS Tensor to float64 dtype as the MPS framework doesn't support float64. Please use float32 instead.
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 108, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 61, in fit
+    l = loss_func_bce_adj(score, torch.stack(grad_log_noise_adj_list), sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 74, in loss_func_bce_adj
+    loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+TypeError: Cannot convert a MPS Tensor to float64 dtype as the MPS framework doesn't support float64. Please use float32 instead.

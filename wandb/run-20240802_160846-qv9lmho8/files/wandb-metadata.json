@@ -1,0 +1,40 @@
+{
+    "os": "macOS-14.5-arm64-arm-64bit",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-08-02T14:08:46.754285",
+    "startedAt": "2024-08-02T14:08:46.196674",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py",
+    "codePath": "train_ppgn_simple_adj.py",
+    "host": "MBP-de-Maxime",
+    "username": "mmuhleth",
+    "executable": "/opt/anaconda3/envs/digress/bin/python3",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 4056,
+        "min": 744,
+        "max": 4056
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4056,
+            "min": 744,
+            "max": 4056
+        }
+    ],
+    "disk": {
+        "total": 460.4317207336426,
+        "used": 98.4319076538086
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

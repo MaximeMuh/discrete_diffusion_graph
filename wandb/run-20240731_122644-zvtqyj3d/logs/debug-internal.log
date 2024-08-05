@@ -1,0 +1,307 @@
+2024-07-31 12:26:44,059 INFO    StreamThr :20295 [internal.py:wandb_internal():86] W&B internal server running at pid: 20295, started at: 2024-07-31 12:26:44.058908
+2024-07-31 12:26:44,059 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: status
+2024-07-31 12:26:44,063 INFO    WriterThread:20295 [datastore.py:open_for_write():85] open: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/run-zvtqyj3d.wandb
+2024-07-31 12:26:44,063 DEBUG   SenderThread:20295 [sender.py:send():369] send: header
+2024-07-31 12:26:44,064 DEBUG   SenderThread:20295 [sender.py:send():369] send: run
+2024-07-31 12:26:44,414 INFO    SenderThread:20295 [dir_watcher.py:__init__():211] watching files in: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files
+2024-07-31 12:26:44,414 INFO    SenderThread:20295 [sender.py:_start_run_threads():1100] run started: zvtqyj3d with start time 1722421604.059912
+2024-07-31 12:26:44,417 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:26:44,417 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:26:44,421 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: check_version
+2024-07-31 12:26:44,421 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: check_version
+2024-07-31 12:26:44,495 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: run_start
+2024-07-31 12:26:44,504 DEBUG   HandlerThread:20295 [system_info.py:__init__():31] System info init
+2024-07-31 12:26:44,504 DEBUG   HandlerThread:20295 [system_info.py:__init__():46] System info init done
+2024-07-31 12:26:44,505 INFO    HandlerThread:20295 [system_monitor.py:start():181] Starting system monitor
+2024-07-31 12:26:44,505 INFO    SystemMonitor:20295 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2024-07-31 12:26:44,505 INFO    HandlerThread:20295 [system_monitor.py:probe():201] Collecting system info
+2024-07-31 12:26:44,506 INFO    SystemMonitor:20295 [interfaces.py:start():190] Started cpu monitoring
+2024-07-31 12:26:44,507 DEBUG   HandlerThread:20295 [system_info.py:probe():195] Probing system
+2024-07-31 12:26:44,507 INFO    SystemMonitor:20295 [interfaces.py:start():190] Started disk monitoring
+2024-07-31 12:26:44,510 INFO    SystemMonitor:20295 [interfaces.py:start():190] Started gpuapple monitoring
+2024-07-31 12:26:44,511 INFO    SystemMonitor:20295 [interfaces.py:start():190] Started memory monitoring
+2024-07-31 12:26:44,512 INFO    SystemMonitor:20295 [interfaces.py:start():190] Started network monitoring
+2024-07-31 12:26:44,514 DEBUG   HandlerThread:20295 [gitlib.py:_init_repo():53] git repository is invalid
+2024-07-31 12:26:44,514 DEBUG   HandlerThread:20295 [system_info.py:probe():240] Probing system done
+2024-07-31 12:26:44,514 DEBUG   HandlerThread:20295 [system_monitor.py:probe():210] {'os': 'macOS-14.5-arm64-arm-64bit', 'python': '3.9.19', 'heartbeatAt': '2024-07-31T10:26:44.507445', 'startedAt': '2024-07-31T10:26:44.048817', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/mmuhleth/Desktop/diffusion_graph/train_unet.py', 'codePath': 'train_unet.py', 'host': 'wifi-pro-82-036.paris.inria.fr', 'username': 'mmuhleth', 'executable': '/opt/anaconda3/envs/digress/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 4056, 'min': 744, 'max': 4056}, 'cpu_freq_per_core': [{'current': 4056, 'min': 744, 'max': 4056}], 'disk': {'total': 460.4317207336426, 'used': 97.44567489624023}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2024-07-31 12:26:44,514 INFO    HandlerThread:20295 [system_monitor.py:probe():211] Finished collecting system info
+2024-07-31 12:26:44,514 INFO    HandlerThread:20295 [system_monitor.py:probe():214] Publishing system info
+2024-07-31 12:26:44,514 DEBUG   HandlerThread:20295 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-07-31 12:26:44,515 DEBUG   HandlerThread:20295 [system_info.py:_save_pip():67] Saving pip packages done
+2024-07-31 12:26:44,515 DEBUG   HandlerThread:20295 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-07-31 12:26:45,420 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/requirements.txt
+2024-07-31 12:26:45,421 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:26:45,421 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/conda-environment.yaml
+2024-07-31 12:26:45,803 DEBUG   HandlerThread:20295 [system_info.py:_save_conda():86] Saving conda packages done
+2024-07-31 12:26:45,804 INFO    HandlerThread:20295 [system_monitor.py:probe():216] Finished publishing system info
+2024-07-31 12:26:45,805 DEBUG   SenderThread:20295 [sender.py:send():369] send: files
+2024-07-31 12:26:45,805 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2024-07-31 12:26:45,807 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: stop_status
+2024-07-31 12:26:45,808 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: stop_status
+2024-07-31 12:26:45,997 DEBUG   SenderThread:20295 [sender.py:send():369] send: telemetry
+2024-07-31 12:26:46,279 INFO    wandb-upload_0:20295 [upload_job.py:push():133] Uploaded file /var/folders/by/3vjcwfjx72q2mrxjrnjhmp9m0000gn/T/tmpvswrifygwandb/s575fnmt-wandb-metadata.json
+2024-07-31 12:26:46,425 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/conda-environment.yaml
+2024-07-31 12:26:46,425 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-metadata.json
+2024-07-31 12:26:49,620 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:26:49,621 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:26:49,621 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: status_report
+2024-07-31 12:26:49,622 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:26:49,622 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:26:50,444 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:26:50,444 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:26:51,798 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:26:51,798 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:26:51,798 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:26:51,799 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:26:52,450 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:26:52,450 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:26:53,979 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:26:53,980 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:26:53,980 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:26:53,980 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:26:54,460 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:26:54,461 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:26:54,985 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: status_report
+2024-07-31 12:26:56,126 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:26:56,126 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:26:56,126 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:26:56,127 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:26:56,471 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:26:56,471 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:26:58,275 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:26:58,275 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:26:58,275 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:26:58,276 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:26:58,481 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:26:58,482 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:00,286 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: status_report
+2024-07-31 12:27:00,447 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:00,447 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:00,447 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:00,447 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:00,491 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:00,491 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:00,813 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: stop_status
+2024-07-31 12:27:00,813 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: stop_status
+2024-07-31 12:27:02,501 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:02,633 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:02,633 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:02,633 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:02,635 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:03,506 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:04,512 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:04,814 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:04,815 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:04,815 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:04,815 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:05,517 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:05,820 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: status_report
+2024-07-31 12:27:06,522 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:06,954 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:06,954 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:06,954 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:06,955 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:07,528 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:08,533 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:09,088 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:09,088 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:09,088 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:09,089 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:09,538 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:10,544 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:11,097 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: status_report
+2024-07-31 12:27:11,250 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:11,250 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:11,250 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:11,250 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:11,549 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:12,554 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:13,419 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:13,419 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:13,419 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:13,419 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:13,557 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:15,582 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:15,583 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:15,583 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:15,583 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:15,818 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: stop_status
+2024-07-31 12:27:15,818 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: stop_status
+2024-07-31 12:27:16,572 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:16,573 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:16,966 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: status_report
+2024-07-31 12:27:17,578 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/config.yaml
+2024-07-31 12:27:17,750 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:17,750 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:17,750 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:17,751 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:18,583 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:18,583 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:19,930 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:19,930 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:19,931 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:19,931 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:20,592 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:20,593 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:22,099 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:22,100 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:22,100 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:22,100 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: status_report
+2024-07-31 12:27:22,100 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:22,603 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:22,603 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:24,251 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:24,251 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:24,251 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:24,252 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:24,610 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:24,610 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:26,415 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:26,416 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:26,416 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:26,416 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:26,620 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:26,621 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:27,421 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: status_report
+2024-07-31 12:27:28,591 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:28,592 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:28,592 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:28,592 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:28,631 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:28,631 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:30,641 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:30,754 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: partial_history
+2024-07-31 12:27:30,754 DEBUG   SenderThread:20295 [sender.py:send():369] send: history
+2024-07-31 12:27:30,754 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: summary_record
+2024-07-31 12:27:30,754 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:30,754 DEBUG   SenderThread:20295 [sender.py:send():369] send: telemetry
+2024-07-31 12:27:30,755 DEBUG   SenderThread:20295 [sender.py:send():369] send: exit
+2024-07-31 12:27:30,755 INFO    SenderThread:20295 [sender.py:send_exit():574] handling exit code: 0
+2024-07-31 12:27:30,755 INFO    SenderThread:20295 [sender.py:send_exit():576] handling runtime: 46
+2024-07-31 12:27:30,755 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:30,755 INFO    SenderThread:20295 [sender.py:send_exit():582] send defer
+2024-07-31 12:27:30,755 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:30,755 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 0
+2024-07-31 12:27:30,755 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:30,755 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 0
+2024-07-31 12:27:30,755 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 1
+2024-07-31 12:27:30,755 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:30,755 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 1
+2024-07-31 12:27:30,755 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:30,755 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 1
+2024-07-31 12:27:30,755 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 2
+2024-07-31 12:27:30,755 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:30,755 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 2
+2024-07-31 12:27:30,755 INFO    HandlerThread:20295 [system_monitor.py:finish():190] Stopping system monitor
+2024-07-31 12:27:30,755 DEBUG   SystemMonitor:20295 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2024-07-31 12:27:30,755 DEBUG   SystemMonitor:20295 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2024-07-31 12:27:30,755 INFO    HandlerThread:20295 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-31 12:27:30,755 DEBUG   SystemMonitor:20295 [system_monitor.py:_start():170] Publishing last batch of metrics
+2024-07-31 12:27:30,755 INFO    HandlerThread:20295 [interfaces.py:finish():202] Joined disk monitor
+2024-07-31 12:27:30,756 INFO    HandlerThread:20295 [interfaces.py:finish():202] Joined gpuapple monitor
+2024-07-31 12:27:30,756 INFO    HandlerThread:20295 [interfaces.py:finish():202] Joined memory monitor
+2024-07-31 12:27:30,756 INFO    HandlerThread:20295 [interfaces.py:finish():202] Joined network monitor
+2024-07-31 12:27:30,756 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:30,756 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 2
+2024-07-31 12:27:30,756 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 3
+2024-07-31 12:27:30,756 DEBUG   SenderThread:20295 [sender.py:send():369] send: telemetry
+2024-07-31 12:27:30,756 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:30,756 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 3
+2024-07-31 12:27:30,756 DEBUG   SenderThread:20295 [sender.py:send():369] send: stats
+2024-07-31 12:27:30,756 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:30,756 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 3
+2024-07-31 12:27:30,756 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 4
+2024-07-31 12:27:30,756 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:30,756 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 4
+2024-07-31 12:27:30,756 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:30,756 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 4
+2024-07-31 12:27:30,756 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 5
+2024-07-31 12:27:30,756 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:30,756 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 5
+2024-07-31 12:27:30,756 DEBUG   SenderThread:20295 [sender.py:send():369] send: summary
+2024-07-31 12:27:30,757 INFO    SenderThread:20295 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2024-07-31 12:27:30,757 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:30,757 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 5
+2024-07-31 12:27:30,757 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 6
+2024-07-31 12:27:30,757 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:30,757 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 6
+2024-07-31 12:27:30,757 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:30,757 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 6
+2024-07-31 12:27:30,758 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: status_report
+2024-07-31 12:27:30,926 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 7
+2024-07-31 12:27:30,926 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:30,926 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 7
+2024-07-31 12:27:30,926 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:30,926 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 7
+2024-07-31 12:27:31,647 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:31,648 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/config.yaml
+2024-07-31 12:27:31,760 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: poll_exit
+2024-07-31 12:27:32,653 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:33,736 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 8
+2024-07-31 12:27:33,737 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: poll_exit
+2024-07-31 12:27:33,737 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:33,738 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 8
+2024-07-31 12:27:33,738 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:33,738 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 8
+2024-07-31 12:27:33,738 INFO    SenderThread:20295 [job_builder.py:build():232] Attempting to build job artifact
+2024-07-31 12:27:33,739 INFO    SenderThread:20295 [job_builder.py:build():266] no source found
+2024-07-31 12:27:33,739 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 9
+2024-07-31 12:27:33,739 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:33,739 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 9
+2024-07-31 12:27:33,739 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:33,740 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 9
+2024-07-31 12:27:33,740 INFO    SenderThread:20295 [dir_watcher.py:finish():359] shutting down directory watcher
+2024-07-31 12:27:34,659 INFO    Thread-12 :20295 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:34,661 INFO    SenderThread:20295 [dir_watcher.py:finish():389] scan: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files
+2024-07-31 12:27:34,661 INFO    SenderThread:20295 [dir_watcher.py:finish():403] scan save: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/requirements.txt requirements.txt
+2024-07-31 12:27:34,662 INFO    SenderThread:20295 [dir_watcher.py:finish():403] scan save: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log output.log
+2024-07-31 12:27:34,665 INFO    SenderThread:20295 [dir_watcher.py:finish():403] scan save: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/config.yaml config.yaml
+2024-07-31 12:27:34,669 INFO    SenderThread:20295 [dir_watcher.py:finish():403] scan save: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json wandb-summary.json
+2024-07-31 12:27:34,672 INFO    SenderThread:20295 [dir_watcher.py:finish():403] scan save: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/conda-environment.yaml conda-environment.yaml
+2024-07-31 12:27:34,675 INFO    SenderThread:20295 [dir_watcher.py:finish():403] scan save: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-metadata.json wandb-metadata.json
+2024-07-31 12:27:34,678 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 10
+2024-07-31 12:27:34,678 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:34,678 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 10
+2024-07-31 12:27:34,679 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:34,679 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 10
+2024-07-31 12:27:34,679 INFO    SenderThread:20295 [file_pusher.py:finish():159] shutting down file pusher
+2024-07-31 12:27:35,064 INFO    wandb-upload_4:20295 [upload_job.py:push():133] Uploaded file /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/conda-environment.yaml
+2024-07-31 12:27:35,138 INFO    wandb-upload_0:20295 [upload_job.py:push():133] Uploaded file /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/requirements.txt
+2024-07-31 12:27:35,143 INFO    wandb-upload_1:20295 [upload_job.py:push():133] Uploaded file /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/output.log
+2024-07-31 12:27:35,146 INFO    wandb-upload_3:20295 [upload_job.py:push():133] Uploaded file /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/wandb-summary.json
+2024-07-31 12:27:35,175 INFO    wandb-upload_2:20295 [upload_job.py:push():133] Uploaded file /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/files/config.yaml
+2024-07-31 12:27:35,380 INFO    Thread-11 :20295 [sender.py:transition_state():602] send defer: 11
+2024-07-31 12:27:35,381 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:35,381 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 11
+2024-07-31 12:27:35,382 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:35,382 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 11
+2024-07-31 12:27:35,382 INFO    SenderThread:20295 [file_pusher.py:join():164] waiting for file pusher
+2024-07-31 12:27:35,382 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 12
+2024-07-31 12:27:35,382 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:35,383 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 12
+2024-07-31 12:27:35,383 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:35,383 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 12
+2024-07-31 12:27:35,737 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 13
+2024-07-31 12:27:35,737 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:35,737 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 13
+2024-07-31 12:27:35,737 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:35,738 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 13
+2024-07-31 12:27:35,738 INFO    SenderThread:20295 [sender.py:transition_state():602] send defer: 14
+2024-07-31 12:27:35,738 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: defer
+2024-07-31 12:27:35,738 INFO    HandlerThread:20295 [handler.py:handle_request_defer():170] handle defer: 14
+2024-07-31 12:27:35,738 DEBUG   SenderThread:20295 [sender.py:send():369] send: final
+2024-07-31 12:27:35,738 DEBUG   SenderThread:20295 [sender.py:send():369] send: footer
+2024-07-31 12:27:35,738 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: defer
+2024-07-31 12:27:35,738 INFO    SenderThread:20295 [sender.py:send_request_defer():598] handle sender defer: 14
+2024-07-31 12:27:35,739 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: poll_exit
+2024-07-31 12:27:35,739 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: server_info
+2024-07-31 12:27:35,739 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: get_summary
+2024-07-31 12:27:35,739 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: sampled_history
+2024-07-31 12:27:35,740 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: poll_exit
+2024-07-31 12:27:35,740 DEBUG   SenderThread:20295 [sender.py:send_request():396] send_request: server_info
+2024-07-31 12:27:36,010 DEBUG   HandlerThread:20295 [handler.py:handle_request():144] handle_request: shutdown
+2024-07-31 12:27:36,010 INFO    HandlerThread:20295 [handler.py:finish():854] shutting down handler
+2024-07-31 12:27:36,745 INFO    WriterThread:20295 [datastore.py:close():298] close: /Users/mmuhleth/Desktop/diffusion_graph/wandb/run-20240731_122644-zvtqyj3d/run-zvtqyj3d.wandb
+2024-07-31 12:27:37,015 INFO    SenderThread:20295 [sender.py:finish():1526] shutting down sender
+2024-07-31 12:27:37,015 INFO    SenderThread:20295 [file_pusher.py:finish():159] shutting down file pusher
+2024-07-31 12:27:37,015 INFO    SenderThread:20295 [file_pusher.py:join():164] waiting for file pusher

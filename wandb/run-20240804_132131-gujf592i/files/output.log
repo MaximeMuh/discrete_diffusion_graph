@@ -1,0 +1,30 @@
+/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py:103: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 106, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 56, in fit
+    l += loss_cycle_consistency(score_batch.squeeze(-1), A, sigma.item(),  device, grid_shape=(4, 4))
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 189, in loss_cycle_consistency
+    noisy_adjs, init_adjs = take_step(model_noise, init_adjs, noiselevel, device, grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 173, in take_step
+    init_adjs = add_bernoulli( init_adjs, noiselevel, device, grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 168, in add_bernoulli
+    init_adjs, noise = discretenoise_adj_neigh(init_adjs, noiselevel, device, grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 227, in discretenoise_adj_neigh
+    bernoulli_adj = torch.where(train_adj_b>1/2,torch.full_like(train_adj_b,1-sigma).to(device),torch.full_like(train_adj_b,sigma).to(device))
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 106, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj_neigh.py", line 56, in fit
+    l += loss_cycle_consistency(score_batch.squeeze(-1), A, sigma.item(),  device, grid_shape=(4, 4))
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 189, in loss_cycle_consistency
+    noisy_adjs, init_adjs = take_step(model_noise, init_adjs, noiselevel, device, grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 173, in take_step
+    init_adjs = add_bernoulli( init_adjs, noiselevel, device, grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 168, in add_bernoulli
+    init_adjs, noise = discretenoise_adj_neigh(init_adjs, noiselevel, device, grid_shape)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 227, in discretenoise_adj_neigh
+    bernoulli_adj = torch.where(train_adj_b>1/2,torch.full_like(train_adj_b,1-sigma).to(device),torch.full_like(train_adj_b,sigma).to(device))
+KeyboardInterrupt

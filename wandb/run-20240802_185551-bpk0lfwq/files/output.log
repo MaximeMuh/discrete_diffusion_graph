@@ -1,0 +1,28 @@
+torch.Size([16, 25, 25])
+torch.Size([400, 25])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.12468634554050684
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 113, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 62, in fit
+    score_batch = model(A=A, node_features= train_noise_adj_b_chunked[i].to(device), mask=mask, sigma=sigma).to(device)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: forward() got an unexpected keyword argument 'sigma'
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 113, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 62, in fit
+    score_batch = model(A=A, node_features= train_noise_adj_b_chunked[i].to(device), mask=mask, sigma=sigma).to(device)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/anaconda3/envs/digress/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: forward() got an unexpected keyword argument 'sigma'

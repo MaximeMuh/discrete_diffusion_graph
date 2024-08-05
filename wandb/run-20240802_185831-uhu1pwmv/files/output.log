@@ -1,0 +1,162 @@
+torch.Size([16, 25, 25])
+torch.Size([400, 25])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.14513072796060245
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.10446480907138411
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.14786587642585108
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.3488469019880948
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.2431541627942801
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.4303744612933439
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.16930481572600808
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.4517581325471299
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.007593369746278333
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.1688072507693621
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.09749083254623025
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.36588971908127377
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.26313694783821584
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.3193623179968954
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.2632984311291077
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+torch.Size([1, 25, 25])
+torch.Size([25, 25])
+torch.Size([1, 25, 25])
+0.4999732738893763
+<class 'numpy.float64'>
+torch.Size([1, 25, 25]) a
+torch.Size([1, 25, 25]) Aaaa.size()
+torch.Size([1, 25, 25]) A.size()
+torch.Size([1, 25, 25, 1]) torch.Size([1, 25, 25, 1])
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 113, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 66, in fit
+    l = loss_func_bce_adj(score, torch.stack(grad_log_noise_adj_list), sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 74, in loss_func_bce_adj
+    loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(config.dev)+1.0/len(sigma_list))
+NameError: name 'config' is not defined
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 113, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 66, in fit
+    l = loss_func_bce_adj(score, torch.stack(grad_log_noise_adj_list), sigma_list, device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/utils/graphs.py", line 74, in loss_func_bce_adj
+    loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(config.dev)+1.0/len(sigma_list))
+NameError: name 'config' is not defined

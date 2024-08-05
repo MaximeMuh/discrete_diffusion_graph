@@ -1,0 +1,14 @@
+
+torch.Size([64, 16, 16])
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 49, in fit
+    print(train_noise_adj_b_chunked[0].unsqueeze(0).sizez())
+AttributeError: 'Tensor' object has no attribute 'sizez'
+Traceback (most recent call last):
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/Users/mmuhleth/Desktop/diffusion_graph/train_ppgn_simple_adj.py", line 49, in fit
+    print(train_noise_adj_b_chunked[0].unsqueeze(0).sizez())
+AttributeError: 'Tensor' object has no attribute 'sizez'
