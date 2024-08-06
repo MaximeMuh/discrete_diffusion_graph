@@ -1,0 +1,121 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:128: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+Epoch 1/200, Loss: 0.15624956301753484
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 2/200, Loss: 0.12488786225754117
+Epoch 3/200, Loss: 0.12485001673774114
+Epoch 4/200, Loss: 0.1248390574067358
+Epoch 5/200, Loss: 0.12163396853776205
+Epoch 6/200, Loss: 0.12279368499441752
+Epoch 7/200, Loss: 0.12068260295523538
+Epoch 8/200, Loss: 0.12355511481799776
+Epoch 9/200, Loss: 0.12480911860863368
+Epoch 10/200, Loss: 0.12471674027897063
+Epoch 11/200, Loss: 0.12208791479231819
+Epoch 12/200, Loss: 0.1258252105779118
+Epoch 13/200, Loss: 0.12398323050094029
+Epoch 14/200, Loss: 0.12569084278647863
+Epoch 15/200, Loss: 0.12180457240532315
+Epoch 16/200, Loss: 0.12039430368514288
+Epoch 17/200, Loss: 0.1239883897323457
+Epoch 18/200, Loss: 0.12226570728752348
+Epoch 19/200, Loss: 0.12124059006335243
+Epoch 20/200, Loss: 0.12162225374153682
+Epoch 21/200, Loss: 0.12155026422133522
+Epoch 22/200, Loss: 0.1217523260958611
+Epoch 23/200, Loss: 0.12297666474940284
+Epoch 24/200, Loss: 0.12434003703177922
+Epoch 25/200, Loss: 0.11859585675928327
+Epoch 26/200, Loss: 0.12098441663242522
+Epoch 27/200, Loss: 0.11985931096095888
+Epoch 28/200, Loss: 0.12173306871028174
+Epoch 29/200, Loss: 0.1189271669302668
+Epoch 30/200, Loss: 0.11849353923684075
+Epoch 31/200, Loss: 0.12533936152855554
+Epoch 32/200, Loss: 0.12043446030408617
+Epoch 33/200, Loss: 0.12021324263205604
+Epoch 34/200, Loss: 0.1265314140963176
+Epoch 35/200, Loss: 0.11733922043016978
+Epoch 36/200, Loss: 0.12489683110089529
+Epoch 37/200, Loss: 0.11762809469586327
+Epoch 38/200, Loss: 0.12144027579398382
+Epoch 39/200, Loss: 0.1220551933797579
+Epoch 40/200, Loss: 0.12197594711231807
+Epoch 41/200, Loss: 0.12032073546969702
+Epoch 42/200, Loss: 0.12267570505066523
+Epoch 43/200, Loss: 0.12278046163301619
+Epoch 44/200, Loss: 0.12238485354279714
+Epoch 45/200, Loss: 0.11576901932084371
+Epoch 46/200, Loss: 0.12059734584320159
+Epoch 47/200, Loss: 0.12016927462721629
+Epoch 48/200, Loss: 0.12211477366231736
+Epoch 49/200, Loss: 0.12344644857304436
+Epoch 50/200, Loss: 0.12154401767821539
+Epoch 51/200, Loss: 0.12084179891953392
+Epoch 52/200, Loss: 0.12118261177388448
+Epoch 53/200, Loss: 0.12379471082536
+Epoch 54/200, Loss: 0.12405503647668022
+Epoch 55/200, Loss: 0.12109505988302685
+Epoch 56/200, Loss: 0.1215358738388334
+Epoch 57/200, Loss: 0.12102259009603471
+Epoch 58/200, Loss: 0.12406150724679704
+Epoch 59/200, Loss: 0.12108805882079261
+Epoch 60/200, Loss: 0.12140033642450969
+Epoch 61/200, Loss: 0.1250272151969728
+Epoch 62/200, Loss: 0.12065253572331534
+Epoch 63/200, Loss: 0.12125667752254576
+Epoch 64/200, Loss: 0.1200525090098381
+Epoch 65/200, Loss: 0.12130389871105315
+Epoch 66/200, Loss: 0.12482710821287972
+Epoch 67/200, Loss: 0.11837324145294371
+Epoch 68/200, Loss: 0.1232766920611972
+Epoch 69/200, Loss: 0.12402361820614527
+Epoch 70/200, Loss: 0.12441248482181913
+Epoch 71/200, Loss: 0.12073476955531136
+Epoch 72/200, Loss: 0.11952952425631266
+Epoch 73/200, Loss: 0.12057563721660584
+Epoch 74/200, Loss: 0.11901209160449013
+Epoch 75/200, Loss: 0.122753730605519
+Epoch 76/200, Loss: 0.12273576855659485
+Epoch 77/200, Loss: 0.1233800622442412
+Epoch 78/200, Loss: 0.12239874958518952
+Epoch 79/200, Loss: 0.12020962850915061
+Epoch 80/200, Loss: 0.12286524722973506
+Epoch 81/200, Loss: 0.12470457596438271
+Epoch 82/200, Loss: 0.11913735324901248
+Epoch 83/200, Loss: 0.12125328017605676
+Epoch 84/200, Loss: 0.1214520273700593
+Epoch 85/200, Loss: 0.12383601826334757
+Epoch 86/200, Loss: 0.12279920753032442
+Epoch 87/200, Loss: 0.11998724180554586
+Epoch 88/200, Loss: 0.12162463485248505
+Epoch 89/200, Loss: 0.12183674259318246
+Epoch 90/200, Loss: 0.12421490571328572
+Epoch 91/200, Loss: 0.12462853155438862
+Epoch 92/200, Loss: 0.12556001413909215
+Epoch 93/200, Loss: 0.12211831067762678
+Epoch 94/200, Loss: 0.12035375395937571
+Epoch 95/200, Loss: 0.12096950116138609
+Epoch 96/200, Loss: 0.12351873292336388
+Epoch 97/200, Loss: 0.12023384254130107
+Epoch 98/200, Loss: 0.12071955156704736
+Epoch 99/200, Loss: 0.11982788961558115
+Epoch 100/200, Loss: 0.12013354199746298
+Epoch 101/200, Loss: 0.12242603432091456
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn_simple_adj.py", line 104, in <module>
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn_simple_adj.py", line 53, in fit
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 259, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 290, in forward_cat
+    noise_level_matrix.transpose(-2, -1), dim1=1, dim2=2
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

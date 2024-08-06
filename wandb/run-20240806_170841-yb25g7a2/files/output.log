@@ -1,0 +1,31 @@
+/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_vlb.py:53: DeprecationWarning: This function is deprecated. Please call randint(1, 32 + 1) instead
+  sigma_ind_list = np.random.random_integers(low=1,high=num_levels,size=data.size(0))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/40, Loss: 213.33382815406435
+Epoch 2/40, Loss: 183.99639904688274
+Epoch 3/40, Loss: 165.52617130582294
+Epoch 4/40, Loss: 120.30570440443735
+Epoch 5/40, Loss: 103.43296577816918
+Epoch 6/40, Loss: 106.72090802873883
+Epoch 7/40, Loss: 86.78860961066351
+Epoch 8/40, Loss: 72.0373072699895
+Epoch 9/40, Loss: 70.80408271910652
+Epoch 10/40, Loss: 64.68800687033033
+Epoch 11/40, Loss: 51.848907107398624
+Epoch 12/40, Loss: nan
+Epoch 13/40, Loss: nan
+Epoch 14/40, Loss: nan
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_vlb.py", line 126, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_vlb.py", line 64, in fit
+    train_adj_b_noisy_matrix, grad_log_noise_adj_list = gen_list_of_data_single_neigh(data, sigma_list, device, grid_shape)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 36, in gen_list_of_data_single_neigh
+    train_noise_adj_b, grad_log_q_noise = discretenoise_adj_neigh(train_adj_b[count],sigma=sigma_i, device=device, grid_shape=grid_shape)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 213, in discretenoise_adj_neigh
+    bernoulli_adj = torch.where(train_adj_b>1/2,torch.full_like(train_adj_b,1-sigma).to(device),torch.full_like(train_adj_b,sigma).to(device))
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,368 @@
+{
+    "os": "Linux-5.14.0-427.26.1.el9_4.x86_64-x86_64-with-glibc2.34",
+    "python": "3.11.9",
+    "heartbeatAt": "2024-08-05T10:42:09.560219",
+    "startedAt": "2024-08-05T10:42:09.065328",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/mmuhleth/discrete_diffusion_graph/train_unet_adj_neigh.py",
+    "codePathLocal": "train_unet_adj_neigh.py",
+    "codePath": "train_unet_adj_neigh.py",
+    "git": {
+        "remote": "git@github.com:MaximeMuh/discrete_diffusion_graph.git",
+        "commit": "77ac558c88d3245e4a32e4f3f1630de8ae2e220b"
+    },
+    "email": null,
+    "root": "/home/mmuhleth/discrete_diffusion_graph",
+    "host": "gpu012",
+    "username": "mmuhleth",
+    "executable": "/home/mmuhleth/miniconda3/envs/py38/bin/python",
+    "cpu_count": 32,
+    "cpu_count_logical": 64,
+    "cpu_freq": {
+        "current": 2807.215640624997,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3426.758,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2794.707,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 125.80834579467773,
+            "used": 2.909423828125
+        }
+    },
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA A100-SXM4-80GB",
+            "memory_total": 85899345920
+        }
+    ],
+    "memory": {
+        "total": 251.61669540405273
+    }
+}

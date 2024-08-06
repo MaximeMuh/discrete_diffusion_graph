@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_vec.py", line 81, in <module>
+    fit(model, optimizer, dataloader, max_epoch=200, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_vec.py", line 49, in fit
+    score = model(train_vec, sigma_list)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model_vec.py", line 30, in forward
+    noise_embedding = self.noise_embedding(noise_levels)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)

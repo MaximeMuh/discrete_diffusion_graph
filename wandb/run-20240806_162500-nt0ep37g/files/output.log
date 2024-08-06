@@ -1,0 +1,158 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:85: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/2000, Loss: 38.55539971590042
+New best model saved with loss: 38.55539971590042
+Epoch 2/2000, Loss: 37.508567690849304
+New best model saved with loss: 37.508567690849304
+Epoch 3/2000, Loss: 38.0685721039772
+Epoch 4/2000, Loss: 37.93726712465286
+Epoch 5/2000, Loss: 37.73332980275154
+Epoch 6/2000, Loss: 37.32783302664757
+New best model saved with loss: 37.32783302664757
+Epoch 7/2000, Loss: 38.461129784584045
+Epoch 8/2000, Loss: 37.41052779555321
+Epoch 9/2000, Loss: 37.348722726106644
+Epoch 10/2000, Loss: 37.84273499250412
+Epoch 11/2000, Loss: 37.948287308216095
+Epoch 12/2000, Loss: 38.373316287994385
+Epoch 13/2000, Loss: 38.244979947805405
+Epoch 14/2000, Loss: 37.399015456438065
+Epoch 15/2000, Loss: 37.27666932344437
+New best model saved with loss: 37.27666932344437
+Epoch 16/2000, Loss: 36.84252992272377
+New best model saved with loss: 36.84252992272377
+Epoch 17/2000, Loss: 37.444447845220566
+Epoch 18/2000, Loss: 37.31109303236008
+Epoch 19/2000, Loss: 37.86006623506546
+Epoch 20/2000, Loss: 37.18291398882866
+Epoch 21/2000, Loss: 37.6122427880764
+Epoch 22/2000, Loss: 38.1111329048872
+Epoch 23/2000, Loss: 37.497548311948776
+Epoch 24/2000, Loss: 37.88597613573074
+Epoch 25/2000, Loss: 37.2694074511528
+Epoch 26/2000, Loss: 38.577486872673035
+Epoch 27/2000, Loss: 38.06360000371933
+Epoch 28/2000, Loss: 36.44123247265816
+New best model saved with loss: 36.44123247265816
+Epoch 29/2000, Loss: 37.70084375143051
+Epoch 30/2000, Loss: 37.651807844638824
+Epoch 31/2000, Loss: 38.32234966754913
+Epoch 32/2000, Loss: 38.58422887325287
+Epoch 33/2000, Loss: 37.4981292784214
+Epoch 34/2000, Loss: 37.899079754948616
+Epoch 35/2000, Loss: 38.09223261475563
+Epoch 36/2000, Loss: 37.19516342878342
+Epoch 37/2000, Loss: 37.92848360538483
+Epoch 38/2000, Loss: 38.0748832821846
+Epoch 39/2000, Loss: 38.45778128504753
+Epoch 40/2000, Loss: 38.09099170565605
+Epoch 41/2000, Loss: 37.36699157953262
+Epoch 42/2000, Loss: 37.992580860853195
+Epoch 43/2000, Loss: 37.84874990582466
+Epoch 44/2000, Loss: 36.97304916381836
+Epoch 45/2000, Loss: 38.2526136636734
+Epoch 46/2000, Loss: 38.276027113199234
+Epoch 47/2000, Loss: 38.05450737476349
+Epoch 48/2000, Loss: 37.824092864990234
+Epoch 49/2000, Loss: 37.82320746779442
+Epoch 50/2000, Loss: 37.34176495671272
+Epoch 51/2000, Loss: 37.88415488600731
+Epoch 52/2000, Loss: 37.278908014297485
+Epoch 53/2000, Loss: 38.036468386650085
+Epoch 54/2000, Loss: 37.3983835875988
+Epoch 55/2000, Loss: 37.6132433116436
+Epoch 56/2000, Loss: 37.8095488846302
+Epoch 57/2000, Loss: 37.39460448920727
+Epoch 58/2000, Loss: 37.23802426457405
+Epoch 59/2000, Loss: 37.46702095866203
+Epoch 60/2000, Loss: 36.96311753988266
+Epoch 61/2000, Loss: 37.8500756919384
+Epoch 62/2000, Loss: 37.65380108356476
+Epoch 63/2000, Loss: 37.814333230257034
+Epoch 64/2000, Loss: 37.28296712040901
+Epoch 65/2000, Loss: 38.510565131902695
+Epoch 66/2000, Loss: 37.34119510650635
+Epoch 67/2000, Loss: 37.457976281642914
+Epoch 68/2000, Loss: 38.35377040505409
+Epoch 69/2000, Loss: 37.029384940862656
+Epoch 70/2000, Loss: 37.885820776224136
+Epoch 71/2000, Loss: 37.25680857896805
+Epoch 72/2000, Loss: 37.75482028722763
+Epoch 73/2000, Loss: 37.87043535709381
+Epoch 74/2000, Loss: 37.70734193921089
+Epoch 75/2000, Loss: 37.667307272553444
+Epoch 76/2000, Loss: 37.70103934407234
+Epoch 77/2000, Loss: 36.603949785232544
+Epoch 78/2000, Loss: 37.843742817640305
+Epoch 79/2000, Loss: 37.88466337323189
+Epoch 80/2000, Loss: 37.241297513246536
+Epoch 81/2000, Loss: 38.37900832295418
+Epoch 82/2000, Loss: 37.6377190053463
+Epoch 83/2000, Loss: 36.897714763879776
+Epoch 84/2000, Loss: 36.74127018451691
+Epoch 85/2000, Loss: 37.5531941652298
+Epoch 86/2000, Loss: 37.10795804858208
+Epoch 87/2000, Loss: 37.347219824790955
+Epoch 88/2000, Loss: 37.95100340247154
+Epoch 89/2000, Loss: 38.39189714193344
+Epoch 90/2000, Loss: 38.184637665748596
+Epoch 91/2000, Loss: 37.656215995550156
+Epoch 92/2000, Loss: 37.8556073307991
+Epoch 93/2000, Loss: 38.21065765619278
+Epoch 94/2000, Loss: 38.09695264697075
+Epoch 95/2000, Loss: 37.86692100763321
+Epoch 96/2000, Loss: 37.92158854007721
+Epoch 97/2000, Loss: 37.556735008955
+Epoch 98/2000, Loss: 37.514662593603134
+Epoch 99/2000, Loss: 37.602871745824814
+Epoch 100/2000, Loss: 37.73623198270798
+Epoch 101/2000, Loss: 37.885226994752884
+Epoch 102/2000, Loss: 37.67629259824753
+Epoch 103/2000, Loss: 36.98047208786011
+Epoch 104/2000, Loss: 37.800933092832565
+Epoch 105/2000, Loss: 37.46184465289116
+Epoch 106/2000, Loss: 37.316145062446594
+Epoch 107/2000, Loss: 37.82057899236679
+Epoch 108/2000, Loss: 36.86274942755699
+Epoch 109/2000, Loss: 37.14011096954346
+Epoch 110/2000, Loss: 37.54754835367203
+Epoch 111/2000, Loss: 38.013222336769104
+Epoch 112/2000, Loss: 38.20673397183418
+Epoch 113/2000, Loss: 37.35071361064911
+Epoch 114/2000, Loss: 37.7424473464489
+Epoch 115/2000, Loss: 37.053640723228455
+Epoch 116/2000, Loss: 38.15065658092499
+Epoch 117/2000, Loss: 37.43794625997543
+Epoch 118/2000, Loss: 37.798567205667496
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=2000, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 50, in fit
+    score_batch = model(A=A, node_features=train_noise_adj_b_chunked[i].to(device), mask=mask, noiselevel=sigma.item()).to(device)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 262, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 308, in forward_cat
+    u = conv(u, mask) + (u if self.residual else 0)
+        ^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 72, in forward
+    out = self.m4(out)
+          ^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1528, in _wrapped_call_impl
+    def _wrapped_call_impl(self, *args, **kwargs):
+KeyboardInterrupt

@@ -1,0 +1,39 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:128: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/200, Loss: 36250.89740950987
+Epoch 2/200, Loss: 2221655.534790039
+Epoch 3/200, Loss: 7343026.413574219
+Epoch 4/200, Loss: 2653669.5263671875
+Epoch 5/200, Loss: 16345397.7109375
+Epoch 6/200, Loss: 2683716.6328125
+Epoch 7/200, Loss: 89490.81384277344
+Epoch 8/200, Loss: 100429.18725585938
+Epoch 9/200, Loss: 20714.343521118164
+Epoch 10/200, Loss: 4874.2777099609375
+Epoch 11/200, Loss: 3404.3848419189453
+Epoch 12/200, Loss: 2878.1112518310547
+Epoch 13/200, Loss: 2349.065742492676
+Epoch 14/200, Loss: 3111.830104827881
+Epoch 15/200, Loss: 2112.2860832214355
+Epoch 16/200, Loss: 1608.3815937042236
+Epoch 17/200, Loss: 1647.7780647277832
+Epoch 18/200, Loss: 5282.014099121094
+Epoch 19/200, Loss: 2739.852470397949
+Epoch 20/200, Loss: 1890.5139198303223
+Epoch 21/200, Loss: 1724.0778121948242
+Epoch 22/200, Loss: 1451.93039894104
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_unet_adj_neigh.py", line 85, in <module>
+    fit(model, optimizer, dataloader, max_epoch=200, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_unet_adj_neigh.py", line 59, in fit
+    l.backward()
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/_tensor.py", line 525, in backward
+    torch.autograd.backward(
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/autograd/__init__.py", line 267, in backward
+    _engine_run_backward(
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

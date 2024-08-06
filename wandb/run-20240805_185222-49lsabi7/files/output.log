@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_vec.py", line 81, in <module>
+    fit(model, optimizer, dataloader, max_epoch=200, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_vec.py", line 48, in fit
+    train_vec = batch_to_edge_vectors(train_noise_adj_b_chunked,grid_shape)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 463, in batch_to_edge_vectors
+    edge_vectors[:, edge_index] = batch_adj_matrices[:, i, j]
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/_tensor.py", line 1089, in __array__
+    return self.numpy().astype(dtype, copy=False)
+           ^^^^^^^^^^^^
+TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.

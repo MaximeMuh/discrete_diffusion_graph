@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_unet_adj_neigh.py", line 79, in <module>
+    fit(model, optimizer, dataloader, max_epoch=100, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_unet_adj_neigh.py", line 48, in fit
+    train_noise_adj_b_chunked = train_noise_adj_b_chunked.unsqueeze(1)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'unsqueeze'

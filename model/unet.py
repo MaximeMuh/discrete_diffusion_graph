@@ -161,7 +161,7 @@ class Unet(nn.Module):
         dim,
         init_dim=None,
         out_dim=None,
-        dim_mults=(1, 2),
+        dim_mults=(1, 2, 4),
         channels=1,
         with_time_emb=True,
         convnext_mult=2,
@@ -265,15 +265,7 @@ class Unet(nn.Module):
 
         return self.final_conv(x)
 
-# Créez une instance du modèle
-model = Unet(dim=64)
 
-# Créez des données d'entrée factices (batch_size, channels, height, width)
-input_data = torch.randn(16, 1, 25, 25)
-time_emb = torch.randn(16)
+# model = Unet(dim=64)
 
-# Passez les données d'entrée dans le modèle
-output_data = model(input_data, time_emb)
 
-# Affichez la forme des données de sortie
-print(output_data.shape)

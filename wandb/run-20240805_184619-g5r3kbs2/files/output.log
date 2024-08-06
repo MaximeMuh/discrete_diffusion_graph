@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_vec.py", line 81, in <module>
+    fit(model, optimizer, dataloader, max_epoch=200, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_vec.py", line 48, in fit
+    train_vec = batch_to_edge_vectors(train_noise_adj_b_chunked,grid_shape)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 457, in batch_to_edge_vectors
+    edge_vectors = np.zeros((bs, num_edges), dtype=int)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'numpy.float64' object cannot be interpreted as an integer

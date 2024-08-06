@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_vec.py", line 81, in <module>
+    fit(model, optimizer, dataloader, max_epoch=200, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_vec.py", line 50, in fit
+    score = torch.tensor(edge_vectors_to_batch(score.cpu, grid_shape)).to(device)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 470, in edge_vectors_to_batch
+    bs, num_edges = edge_vectors.shape
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'shape'

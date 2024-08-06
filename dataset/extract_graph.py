@@ -1,12 +1,28 @@
+
+import sys
+import os
+import sys
+import os
 import networkx as nx
-import matplotlib.pyplot as plt
 import numpy as np
 import random
 import pickle
 import torch
 from torch.utils.data import Dataset, DataLoader
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import matplotlib.pyplot as plt
 
 def wilson_algorithm(G, start):
+    """
+    Wilson's algorithm for generating a uniform spanning tree on a graph.
+
+    Parameters:
+    - G: NetworkX graph
+    - start: starting node for the algorithm
+
+    Returns:
+    - T: Uniform spanning tree of G
+    """
     U = {start}
     T = nx.Graph()
     while len(U) < len(G.nodes):
@@ -24,12 +40,30 @@ def wilson_algorithm(G, start):
     return T
 
 def generate_ust_maze(width, height):
+    """
+    Generate a maze using Wilson's algorithm.
+
+    Parameters:
+    - width: width of the maze
+    - height: height of the maze
+
+    Returns:
+    - T: Uniform spanning tree representing the maze
+    """
     G = nx.grid_2d_graph(width, height)
     start = (random.randint(0, width-1), random.randint(0, height-1))
     T = wilson_algorithm(G, start)
     return T
 
 def draw_maze(T, width, height):
+    """
+    Draw the maze represented by the uniform spanning tree.
+
+    Parameters:
+    - T: Uniform spanning tree representing the maze
+    - width: width of the maze
+    - height: height of the maze
+    """
     pos = {(x, y): (x, y) for x, y in T.nodes()}
     plt.figure(figsize=(10, 10))
     nx.draw(T, pos=pos, with_labels=False, node_size=10, width=2, edge_color='blue')
@@ -39,6 +73,17 @@ def draw_maze(T, width, height):
     plt.show()
 
 def adjacency_matrix(T, width, height):
+    """
+    Convert the uniform spanning tree to an adjacency matrix.
+
+    Parameters:
+    - T: Uniform spanning tree representing the maze
+    - width: width of the maze
+    - height: height of the maze
+
+    Returns:
+    - adj_matrix: adjacency matrix of the maze
+    """
     nodes = [(i, j) for j in range(height) for i in range(width)]
     index = {node: i for i, node in enumerate(nodes)}
     size = len(nodes)
@@ -50,6 +95,17 @@ def adjacency_matrix(T, width, height):
     return adj_matrix
 
 def graph_from_adjacency_matrix(adj_matrix, width, height):
+    """
+    Convert an adjacency matrix to a graph.
+
+    Parameters:
+    - adj_matrix: adjacency matrix of the maze
+    - width: width of the maze
+    - height: height of the maze
+
+    Returns:
+    - G: NetworkX graph representing the maze
+    """
     G = nx.Graph()
     size = len(adj_matrix)
     
@@ -66,6 +122,14 @@ def graph_from_adjacency_matrix(adj_matrix, width, height):
     return G
 
 def draw_maze_from_matrix(adj_matrix, width, height):
+    """
+    Draw the maze represented by the adjacency matrix.
+
+    Parameters:
+    - adj_matrix: adjacency matrix of the maze
+    - width: width of the maze
+    - height: height of the maze
+    """
     G = graph_from_adjacency_matrix(adj_matrix, width, height)
     pos = {(x, y): (x, y) for x, y in G.nodes()}
     plt.figure(figsize=(10, 10))
@@ -76,6 +140,15 @@ def draw_maze_from_matrix(adj_matrix, width, height):
     plt.show()
 
 def upper_triangular_to_vector(adj_matrix):
+    """
+    Convert the upper triangular part of the adjacency matrix to a vector.
+
+    Parameters:
+    - adj_matrix: adjacency matrix of the maze
+
+    Returns:
+    - upper_triangular_vector: vector representation of the upper triangular part of the adjacency matrix
+    """
     size = len(adj_matrix)
     upper_triangular_vector = []
     
@@ -86,6 +159,16 @@ def upper_triangular_to_vector(adj_matrix):
     return upper_triangular_vector
 
 def vector_to_upper_triangular(vector, size):
+    """
+    Convert a vector to the upper triangular part of an adjacency matrix.
+
+    Parameters:
+    - vector: vector representation of the upper triangular part of the adjacency matrix
+    - size: size of the adjacency matrix
+
+    Returns:
+    - adj_matrix: adjacency matrix of the maze
+    """
     adj_matrix = np.zeros((size, size), dtype=int)
     index = 0
     
@@ -98,30 +181,90 @@ def vector_to_upper_triangular(vector, size):
     return adj_matrix
 
 def load_graphs(filename):
+    """
+    Load graphs from a pickle file.
+
+    Parameters:
+    - filename: name of the pickle file
+
+    Returns:
+    - graphs: list of graphs loaded from the pickle file
+    """
     with open(filename, 'rb') as file:
         graphs = pickle.load(file)
     return graphs
 
 def graph_to_vector(G, width, height):
+    """
+    Convert a graph to a vector representation.
+
+    Parameters:
+    - G: NetworkX graph representing the maze
+    - width: width of the maze
+    - height: height of the maze
+
+    Returns:
+    - vector: vector representation of the maze
+    """
     adj_matrix = adjacency_matrix(G, width, height)
     vector = upper_triangular_to_vector(adj_matrix)
     return vector
+
 def graph_to_adj(G, width, height):
+    """
+    Convert a graph to an adjacency matrix.
+
+    Parameters:
+    - G: NetworkX graph representing the maze
+    - width: width of the maze
+    - height: height of the maze
+
+    Returns:
+    - adj_matrix: adjacency matrix of the maze
+    """
     adj_matrix = adjacency_matrix(G, width, height)
     return adj_matrix
 
 def vector_to_graph(vector, width, height):
+    """
+    Convert a vector representation to a graph.
+
+    Parameters:
+    - vector: vector representation of the maze
+    - width: width of the maze
+    - height: height of the maze
+
+    Returns:
+    - G: NetworkX graph representing the maze
+    """
     size = width * height
     adj_matrix = vector_to_upper_triangular(vector, size)
     G = graph_from_adjacency_matrix(adj_matrix, width, height)
     return G
 
 def visualize_graph_from_vector(vector, width, height, title="Graph from Vector"):
+    """
+    Visualize a graph from its vector representation.
+
+    Parameters:
+    - vector: vector representation of the maze
+    - width: width of the maze
+    - height: height of the maze
+    - title: title of the plot (default: "Graph from Vector")
+    """
     G = vector_to_graph(vector, width, height)
     draw_maze_from_matrix(nx.to_numpy_array(G), width, height)
 
 class GraphDataset(Dataset):
     def __init__(self, filename, width, height):
+        """
+        Dataset class for loading graphs from a pickle file.
+
+        Parameters:
+        - filename: name of the pickle file
+        - width: width of the maze
+        - height: height of the maze
+        """
         self.graphs = load_graphs(filename)
         self.width = width
         self.height = height
@@ -135,6 +278,14 @@ class GraphDataset(Dataset):
 
 class GraphDataset_adj(Dataset):
     def __init__(self, filename, width, height):
+        """
+        Dataset class for loading adjacency matrices from a pickle file.
+
+        Parameters:
+        - filename: name of the pickle file
+        - width: width of the maze
+        - height: height of the maze
+        """
         self.graphs = load_graphs(filename)
         self.width = width
         self.height = height
@@ -146,48 +297,79 @@ class GraphDataset_adj(Dataset):
     def __getitem__(self, idx):
         return torch.tensor(self.adjs[idx], dtype=torch.float32)
 
-
-
 def get_dataloader(filename, width, height, batch_size, shuffle=True):
+    """
+    Get a DataLoader for a graph dataset.
+
+    Parameters:
+    - filename: name of the pickle file
+    - width: width of the maze
+    - height: height of the maze
+    - batch_size: batch size
+    - shuffle: whether to shuffle the data (default: True)
+
+    Returns:
+    - dataloader: DataLoader for the graph dataset
+    """
     dataset = GraphDataset(filename, width, height)
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=shuffle)
     return dataloader
 
-
 def get_dataloader_adj(filename, width, height, batch_size, shuffle=True):
+    """
+    Get a DataLoader for an adjacency matrix dataset.
+
+    Parameters:
+    - filename: name of the pickle file
+    - width: width of the maze
+    - height: height of the maze
+    - batch_size: batch size
+    - shuffle: whether to shuffle the data (default: True)
+
+    Returns:
+    - dataloader: DataLoader for the adjacency matrix dataset
+    """
     dataset = GraphDataset_adj(filename, width, height)
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=shuffle)
     return dataloader
 
-
-
 def visualize_batch_from_dataloader(dataloader, width, height):
+    """
+    Visualize a batch of graphs from a dataloader.
+
+    Parameters:
+    - dataloader: DataLoader for the graph dataset
+    - width: width of the maze
+    - height: height of the maze
+    """
     for batch_idx, data in enumerate(dataloader):
         print(f"Batch {batch_idx + 1}:")
         for vector in data:
             visualize_graph_from_vector(vector.numpy(), width, height, f"Graph from Vector - Batch {batch_idx + 1}")
 
-
 def visualize_graph(data, width, height):
+    """
+    Visualize a single graph.
+
+    Parameters:
+    - data: graph data
+    - width: width of the maze
+    - height: height of the maze
+    """
     print(data.size())
     for vector in data:
         print(vector.size())    
         visualize_graph_from_vector(vector.numpy(), width, height)
 
-
-
-
-
-
 def main():
-    filename = 'dataset/usts_4.pkl'
-    width, height = 4, 4
-    batch_size = 16  
+    filename = 'dataset/usts_6.pkl'
+    width, height = 6, 6
+    batch_size = 1000 
 
     dataloader = get_dataloader(filename, width, height, batch_size)
     ite = next(iter(dataloader))
     print(ite.size())
-    vector = ite[0]
+    vector = ite[100]
     adjacency_matrix = vector_to_upper_triangular(vector.numpy(), width * height)
     print(adjacency_matrix)
     g = graph_from_adjacency_matrix(adjacency_matrix, width, height)

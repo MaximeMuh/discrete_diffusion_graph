@@ -1,0 +1,41 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:128: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/1000, Loss: 13.07754336297512
+Epoch 2/1000, Loss: 16.83995145559311
+Epoch 3/1000, Loss: 13.278293319046497
+Epoch 4/1000, Loss: 13.24522203207016
+Epoch 5/1000, Loss: 12.591066673398018
+Epoch 6/1000, Loss: 12.239157721400261
+Epoch 7/1000, Loss: 11.802868723869324
+Epoch 8/1000, Loss: 11.458166785538197
+Epoch 9/1000, Loss: 11.583243004977703
+Epoch 10/1000, Loss: 11.662993006408215
+Epoch 11/1000, Loss: 11.103612303733826
+Epoch 12/1000, Loss: 10.934678666293621
+Epoch 13/1000, Loss: 11.356566086411476
+Epoch 14/1000, Loss: 10.528180494904518
+Epoch 15/1000, Loss: 10.43384275585413
+Epoch 16/1000, Loss: 10.953318819403648
+Epoch 17/1000, Loss: 10.132935225963593
+Epoch 18/1000, Loss: 10.060948014259338
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_unet_adj_neigh.py", line 86, in <module>
+    fit(model, optimizer, dataloader, max_epoch=1000, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_unet_adj_neigh.py", line 59, in fit
+    l += loss_cycle_consistency(score[i].unsqueeze(0) , train_noise_adj_b_chunked.squeeze(1)[i].unsqueeze(0), sigma.item(),  device, grid_shape=grid_shape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 215, in loss_cycle_consistency
+    noisy_adjs, init_adjs = take_step(model_noise, init_adjs, noiselevel, device, grid_shape)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 198, in take_step
+    init_adjs = add_bernoulli( init_adjs, noiselevel, device, grid_shape)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 193, in add_bernoulli
+    init_adjs, noise = discretenoise_adj_neigh(init_adjs, noiselevel, device, grid_shape)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 269, in discretenoise_adj_neigh
+    grad_log_noise = torch.abs(-train_adj_b + noise)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

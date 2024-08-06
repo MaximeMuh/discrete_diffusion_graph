@@ -1,0 +1,55 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:128: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/100, Loss: 41.61765676736832
+Epoch 2/100, Loss: 42.49175360798836
+Epoch 3/100, Loss: 43.44450518488884
+Epoch 4/100, Loss: 45.76896196603775
+Epoch 5/100, Loss: 44.75062781572342
+Epoch 6/100, Loss: 49.13377922773361
+Epoch 7/100, Loss: 51.36413073539734
+Epoch 8/100, Loss: 51.8298122882843
+Epoch 9/100, Loss: 51.70698755979538
+Epoch 10/100, Loss: 53.36373695731163
+Epoch 11/100, Loss: 52.39188772439957
+Epoch 12/100, Loss: 53.15575009584427
+Epoch 13/100, Loss: 55.98196041584015
+Epoch 14/100, Loss: 56.93339550495148
+Epoch 15/100, Loss: 56.52521800994873
+Epoch 16/100, Loss: 56.07408982515335
+Epoch 17/100, Loss: 56.3542200922966
+Epoch 18/100, Loss: 57.431652307510376
+Epoch 19/100, Loss: 55.19778501987457
+Epoch 20/100, Loss: 56.73015320301056
+Epoch 21/100, Loss: 54.83776244521141
+Epoch 22/100, Loss: 57.93199083209038
+Epoch 23/100, Loss: 58.49437081813812
+Epoch 24/100, Loss: 56.14971920847893
+Epoch 25/100, Loss: 57.19644904136658
+Epoch 26/100, Loss: 55.21227389574051
+Epoch 27/100, Loss: 58.00970250368118
+Epoch 28/100, Loss: 57.197620660066605
+Epoch 29/100, Loss: 57.008869647979736
+Epoch 30/100, Loss: 56.66624861955643
+Epoch 31/100, Loss: 57.69671204686165
+Epoch 32/100, Loss: 57.149464309215546
+Epoch 33/100, Loss: 56.68160116672516
+Epoch 34/100, Loss: 57.36919033527374
+Epoch 35/100, Loss: 59.16642600297928
+Epoch 36/100, Loss: 56.524509608745575
+Epoch 37/100, Loss: 56.274541676044464
+Epoch 38/100, Loss: 56.69476464390755
+Epoch 39/100, Loss: 57.275897800922394
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_unet_adj_neigh.py", line 82, in <module>
+    fit(model, optimizer, dataloader, max_epoch=100, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_unet_adj_neigh.py", line 55, in fit
+    l += loss_cycle_consistency(score[i].unsqueeze(0) , train_noise_adj_b_chunked.squeeze(1)[i].unsqueeze(0), sigma.item(),  device, grid_shape=(4, 4))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 223, in loss_cycle_consistency
+    if not nx.is_connected(G):
+           ^^^^^^^^^^^^^^^^^^
+  File "<class 'networkx.utils.decorators.argmap'> compilation 8", line 1, in argmap_is_connected_5
+    import bz2
+KeyboardInterrupt

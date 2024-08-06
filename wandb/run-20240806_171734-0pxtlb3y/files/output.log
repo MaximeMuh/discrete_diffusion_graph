@@ -1,0 +1,124 @@
+/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_vlb.py:49: DeprecationWarning: This function is deprecated. Please call randint(1, 64 + 1) instead
+  sigma_ind_list = np.random.random_integers(low=1,high=num_levels,size=data.size(0))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/400, Loss: 30.637495245252335
+Epoch 2/400, Loss: 12.560529792119587
+Epoch 3/400, Loss: 10.653093663472978
+Epoch 4/400, Loss: 10.806629082513235
+Epoch 5/400, Loss: 10.67734103732639
+Epoch 6/400, Loss: 11.788954091450524
+Epoch 7/400, Loss: 10.167644970000737
+Epoch 8/400, Loss: 10.711240541367303
+Epoch 9/400, Loss: 9.98676123694768
+Epoch 10/400, Loss: 10.592550777253651
+Epoch 11/400, Loss: 10.52841561938089
+Epoch 12/400, Loss: 11.185677286178347
+Epoch 13/400, Loss: 9.731168300386459
+Epoch 14/400, Loss: 10.21963375712198
+Epoch 15/400, Loss: 10.334506239209857
+Epoch 16/400, Loss: 10.881407374427432
+Epoch 17/400, Loss: 11.196074712844123
+Epoch 18/400, Loss: 9.278849942343575
+Epoch 19/400, Loss: 9.06441409247262
+Epoch 20/400, Loss: 9.855444915710933
+Epoch 21/400, Loss: 10.102753639221191
+Epoch 22/400, Loss: 10.102134235321529
+Epoch 23/400, Loss: 10.354815081944542
+Epoch 24/400, Loss: 10.485514156402104
+Epoch 25/400, Loss: 9.19262052717663
+Epoch 26/400, Loss: 9.14662724449521
+Epoch 27/400, Loss: 9.619966446407258
+Epoch 28/400, Loss: 9.537779596116808
+Epoch 29/400, Loss: 9.884772482372465
+Epoch 30/400, Loss: 9.279378444429428
+Epoch 31/400, Loss: 9.661675271533785
+Epoch 32/400, Loss: 9.22556658018203
+Epoch 33/400, Loss: 9.502322340768481
+Epoch 34/400, Loss: 10.213953661540199
+Epoch 35/400, Loss: 10.008582202215043
+Epoch 36/400, Loss: 9.22395286105928
+Epoch 37/400, Loss: 9.420514924185616
+Epoch 38/400, Loss: 9.485356497386146
+Epoch 39/400, Loss: 9.628926981063117
+Epoch 40/400, Loss: 9.500618817314269
+Epoch 41/400, Loss: 9.702803051660931
+Epoch 42/400, Loss: 8.463797879597497
+Epoch 43/400, Loss: 9.333327058761839
+Epoch 44/400, Loss: 9.161513366396465
+Epoch 45/400, Loss: 9.33672729371086
+Epoch 46/400, Loss: 9.771549565451485
+Epoch 47/400, Loss: 9.107804637106637
+Epoch 48/400, Loss: 9.318719269737365
+Epoch 49/400, Loss: 9.379782952959575
+Epoch 50/400, Loss: 9.342209740290565
+Epoch 51/400, Loss: 8.718424009898353
+Epoch 52/400, Loss: 9.061016843432473
+Epoch 53/400, Loss: 8.78347531197563
+Epoch 54/400, Loss: 9.58302230683584
+Epoch 55/400, Loss: 9.863639180622403
+Epoch 56/400, Loss: 9.177460632626973
+Epoch 57/400, Loss: 9.2704635726081
+Epoch 58/400, Loss: 9.575795907822867
+Epoch 59/400, Loss: 9.124813761029925
+Epoch 60/400, Loss: 9.813939934685116
+Epoch 61/400, Loss: 9.177217642466227
+Epoch 62/400, Loss: 9.38238081099495
+Epoch 63/400, Loss: 9.31955295138889
+Epoch 64/400, Loss: 9.247432701171391
+Epoch 65/400, Loss: 9.065551061478873
+Epoch 66/400, Loss: 9.36283828720214
+Epoch 67/400, Loss: 9.103177857777428
+Epoch 68/400, Loss: 8.912654683703469
+Epoch 69/400, Loss: 9.386563921731616
+Epoch 70/400, Loss: 9.074606762992012
+Epoch 71/400, Loss: 8.638256307632204
+Epoch 72/400, Loss: 9.394665157984173
+Epoch 73/400, Loss: 9.06236205782209
+Epoch 74/400, Loss: 9.137611941685753
+Epoch 75/400, Loss: 8.687189253549727
+Epoch 76/400, Loss: 10.247820854187012
+Epoch 77/400, Loss: 9.824392780425056
+Epoch 78/400, Loss: 10.053733462379093
+Epoch 79/400, Loss: 9.249627870226663
+Epoch 80/400, Loss: 9.208182516552153
+Epoch 81/400, Loss: 8.925261119055369
+Epoch 82/400, Loss: 9.122175398327055
+Epoch 83/400, Loss: 9.890403005811903
+Epoch 84/400, Loss: 9.09506888995095
+Epoch 85/400, Loss: 9.055964636424232
+Epoch 86/400, Loss: 9.22438078834897
+Epoch 87/400, Loss: 8.66197559568617
+Epoch 88/400, Loss: 9.09948168103657
+Epoch 89/400, Loss: 9.011229416680715
+Epoch 90/400, Loss: 8.725224441952175
+Epoch 91/400, Loss: 9.798781020300728
+Epoch 92/400, Loss: 8.861648105439686
+Epoch 93/400, Loss: 9.885819223192003
+Epoch 94/400, Loss: 8.644602442544604
+Epoch 95/400, Loss: 9.281016875827124
+Epoch 96/400, Loss: 8.606743085952033
+Epoch 97/400, Loss: 9.478870618911017
+Epoch 98/400, Loss: 9.409312759126935
+Epoch 99/400, Loss: 8.53064923437815
+Epoch 100/400, Loss: 8.769320654490638
+Epoch 101/400, Loss: 9.438542941259959
+Epoch 102/400, Loss: 9.175633014194549
+Epoch 103/400, Loss: 9.177624384562174
+Epoch 104/400, Loss: 9.407937106632051
+Epoch 105/400, Loss: 8.570271987763663
+Epoch 106/400, Loss: 9.591095012331765
+Epoch 107/400, Loss: 9.552940065898593
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_vlb.py", line 117, in <module>
+    fit(model, optimizer, dataloader, max_epoch=400, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_vlb.py", line 70, in fit
+    loss.backward()
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/_tensor.py", line 525, in backward
+    torch.autograd.backward(
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/autograd/__init__.py", line 267, in backward
+    _engine_run_backward(
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

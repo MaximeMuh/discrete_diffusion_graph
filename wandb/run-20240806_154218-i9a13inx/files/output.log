@@ -1,0 +1,35 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:85: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/2000, Loss: 2.807021973625062
+New best model saved with loss: 2.807021973625062
+Epoch 2/2000, Loss: 2.8249019630371577
+Epoch 3/2000, Loss: 2.8036996939825634
+New best model saved with loss: 2.8036996939825634
+Epoch 4/2000, Loss: 2.903402228204031
+Epoch 5/2000, Loss: 2.7780620900411455
+New best model saved with loss: 2.7780620900411455
+Epoch 6/2000, Loss: 2.7575414256444053
+New best model saved with loss: 2.7575414256444053
+Epoch 7/2000, Loss: 2.8040782061834184
+Epoch 8/2000, Loss: 2.744045749543205
+New best model saved with loss: 2.744045749543205
+Epoch 9/2000, Loss: 2.7123089744931175
+New best model saved with loss: 2.7123089744931175
+Epoch 10/2000, Loss: 2.599464350276523
+New best model saved with loss: 2.599464350276523
+Epoch 11/2000, Loss: 2.8570751386975486
+Epoch 12/2000, Loss: 2.7082357614759416
+Epoch 13/2000, Loss: 2.700148784925067
+Epoch 14/2000, Loss: 2.8077033190500167
+Epoch 15/2000, Loss: 2.7207629302191356
+Epoch 16/2000, Loss: 2.7392709860726008
+Epoch 17/2000, Loss: 2.799222985903422
+Epoch 18/2000, Loss: 2.7399771554129466
+Epoch 19/2000, Loss: 2.7641616227134826
+Epoch 20/2000, Loss: 2.7490879808153426
+Epoch 21/2000, Loss: 2.8157037439800443
+Epoch 22/2000, Loss: 2.7433878940249246
+Epoch 23/2000, Loss: 2.734388978708358
+Epoch 24/2000, Loss: 2.7371879513301547

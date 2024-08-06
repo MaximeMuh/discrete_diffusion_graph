@@ -1,0 +1,12 @@
+/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_vlb.py:52: DeprecationWarning: This function is deprecated. Please call randint(1, 32 + 1) instead
+  sigma_ind_list = np.random.random_integers(low=1,high=num_levels,size=data.size(0))
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_vlb.py", line 125, in <module>
+    fit(model, optimizer, dataloader, max_epoch=40, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_vlb.py", line 63, in fit
+    train_adj_b_noisy, grad_log_noise_list = discretenoise_adj_neigh(data, sigma_list, device, grid_shape=(4, 4))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 213, in discretenoise_adj_neigh
+    bernoulli_adj = torch.where(train_adj_b>1/2,torch.full_like(train_adj_b,1-sigma).to(device),torch.full_like(train_adj_b,sigma).to(device))
+                                                                            ~^~~~~~
+TypeError: unsupported operand type(s) for -: 'int' and 'list'

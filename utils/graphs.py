@@ -1,26 +1,14 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from dataset.extract_graph import load_graphs, graph_to_vector, vector_to_graph, visualize_graph_from_vector, GraphDataset
 
 
-
 def gen_list_of_data_single(train_adj_b, sigma_list, device):
-    """
-    :param train_x_b: [batch_size, N, F_in], batch of feature vectors of nodes
-    :param train_adj_b: [batch_size, N, N], batch of original adjacency matrices
-    :param train_node_flag_b: [batch_size, N], the flags for the existence of nodes
-    :param sigma_list: list of noise levels
-    :return:
-        train_x_b: [len(sigma_list) * batch_size, N, F_in], batch of feature vectors of nodes (w.r.t. `train_noise_adj_b`)
-        train_noise_adj_b: [len(sigma_list) * batch_size, N, N], batch of perturbed adjacency matrices
-        train_node_flag_b: [len(sigma_list) * batch_size, N], the flags for the existence of nodes (w.r.t. `train_noise_adj_b`)
-        grad_log_q_noise_list: [len(sigma_list) * batch_size, N, N], the ground truth gradient (w.r.t. `train_noise_adj_b`)
-    """
+
     assert isinstance(sigma_list, list)
     train_noise_adj_b_list = []
     grad_log_q_noise_list = []
@@ -38,17 +26,23 @@ def gen_list_of_data_single(train_adj_b, sigma_list, device):
 
 
 def gen_list_of_data_single_neigh(train_adj_b, sigma_list, device, grid_shape):
-    """
-    :param train_x_b: [batch_size, N, F_in], batch of feature vectors of nodes
-    :param train_adj_b: [batch_size, N, N], batch of original adjacency matrices
-    :param train_node_flag_b: [batch_size, N], the flags for the existence of nodes
-    :param sigma_list: list of noise levels
-    :return:
-        train_x_b: [len(sigma_list) * batch_size, N, F_in], batch of feature vectors of nodes (w.r.t. `train_noise_adj_b`)
-        train_noise_adj_b: [len(sigma_list) * batch_size, N, N], batch of perturbed adjacency matrices
-        train_node_flag_b: [len(sigma_list) * batch_size, N], the flags for the existence of nodes (w.r.t. `train_noise_adj_b`)
-        grad_log_q_noise_list: [len(sigma_list) * batch_size, N, N], the ground truth gradient (w.r.t. `train_noise_adj_b`)
-    """
+
+    assert isinstance(sigma_list, list)
+    train_noise_adj_b_list = []
+    grad_log_q_noise_list = []
+    count=0
+    for sigma_i in sigma_list:
+        
+        train_noise_adj_b, grad_log_q_noise = discretenoise_adj_neigh(train_adj_b[count],sigma=sigma_i, device=device, grid_shape=grid_shape)
+        train_noise_adj_b_list.append(train_noise_adj_b)
+        grad_log_q_noise_list.append(grad_log_q_noise)
+        count=count+1
+
+    train_noise_adj_b = torch.cat(train_noise_adj_b_list, dim=0)
+    return  train_noise_adj_b, grad_log_q_noise_list
+
+def gen_list_of_data_single_neigh_unet(train_adj_b, sigma_list, device, grid_shape):
+
     assert isinstance(sigma_list, list)
     train_noise_adj_b_list = []
     grad_log_q_noise_list = []
@@ -64,20 +58,8 @@ def gen_list_of_data_single_neigh(train_adj_b, sigma_list, device, grid_shape):
     return  train_noise_adj_b, grad_log_q_noise_list
 
 
-
 def loss_func_bce(score_list, grad_log_noise_vec, sigma, device):
-    """
-    Calcule la perte BCE modifiée pour des vecteurs représentant la partie supérieure des matrices d'adjacence.
 
-    Args:
-        score_list (torch.Tensor): Tensor de taille (Batch_size, num_elements) contenant les scores du modèle.
-        grad_log_q_noise_list (torch.Tensor): Tensor de taille (Batch_size, num_elements) contenant les gradients de la log-vraisemblance du bruit.
-        sigma_list (torch.Tensor): Tensor de taille (Batch_size) contenant les niveaux de bruit pour chaque élément du batch.
-        device (torch.device): Dispositif sur lequel exécuter les calculs (CPU ou GPU MPS).
-    
-    Returns:
-        torch.Tensor: La perte moyenne calculée sur le batch.
-    """
     score_list = score_list.to(device)
     grad_log_noise_vec = grad_log_noise_vec.to(device)
     
@@ -158,12 +140,6 @@ def loss_func_kld(score_list, train_noise_adj_b, train_adj_b, grad_log_q_noise_l
     return loss
 
 
-
-
-
-
-
-
 def add_bernoulli( init_adjs, noiselevel, device, grid_shape):
     init_adjs, noise = discretenoise_adj_neigh(init_adjs, noiselevel, device, grid_shape)
 
@@ -185,26 +161,34 @@ def take_step(model_noise, init_adjs, noiselevel, device, grid_shape):
 
 
 
-def loss_cycle_consistency(model_noise, init_adjs, noiselevel,  device, grid_shape, lambda_cycle=1.0, lambda_conn=5.0):
+def loss_cycle_consistency(model_noise, init_adjs, noiselevel,  device, grid_shape, lambda_cycle=0.1, lambda_conn=1, lambda_isolated=0.1):
+
     noisy_adjs, init_adjs = take_step(model_noise, init_adjs, noiselevel, device, grid_shape)
     batch_size, num_nodes, _ = init_adjs.shape
     total_loss = 0.0
-    
     for graph in init_adjs:
+        conn_loss = 0.0
+        isolated_loss = 0.0
+        cycle_loss = 0.0
         G = nx.from_numpy_matrix(graph.cpu().numpy())
 
-        conn_loss = 0.0
         if not nx.is_connected(G):
-            # print('not conn')
+
             conn_loss = lambda_conn
 
         cycles = nx.cycle_basis(G)
         cycle_count = len(cycles)
-        # print(cycle_count)
+
         cycle_loss = cycle_count * lambda_cycle
+
+
         
-        total_loss += conn_loss + cycle_loss
-    
+        for node in G.nodes():
+            if G.degree(node) == 0: 
+                isolated_loss += lambda_isolated
+        
+        total_loss += conn_loss + cycle_loss + isolated_loss
+
     return total_loss / batch_size
 
 
@@ -339,7 +323,7 @@ def graph_from_adjacency_matrix(adj_matrix, width, height):
 def draw_maze_from_matrix(adj_matrix, width, height, title='Maze'):
     G = graph_from_adjacency_matrix(adj_matrix, width, height)
     pos = {(x, y): (x, y) for x, y in G.nodes()}
-    plt.figure(figsize=(5, 5))
+    plt.figure(figsize=(3, 3))
     nx.draw(G, pos=pos, with_labels=False, node_size=10, width=2, edge_color='blue')
     plt.xlim(-1, width)
     plt.ylim(-1, height)
@@ -348,7 +332,30 @@ def draw_maze_from_matrix(adj_matrix, width, height, title='Maze'):
     plt.show()
 
 
+def draw_maze_before_after(adj_matrix, width, height, grid_shape, title_before='Before Processing', title_after='After Processing'):
+    fig, axes = plt.subplots(1, 2, figsize=(8, 4))
 
+    G_before = graph_from_adjacency_matrix(adj_matrix, width, height)
+    pos_before = {(x, y): (x, y) for x, y in G_before.nodes()}
+    plt.sca(axes[0])
+    nx.draw(G_before, pos=pos_before, with_labels=False, node_size=10, width=2, edge_color='blue')
+    axes[0].set_xlim(-1, width)
+    axes[0].set_ylim(-1, height)
+    axes[0].invert_yaxis()
+    axes[0].set_title(title_before)
+
+    adj_matrix_processed = post_process_graph(adj_matrix, grid_shape=grid_shape)
+
+    G_after = graph_from_adjacency_matrix(adj_matrix_processed, width, height)
+    pos_after = {(x, y): (x, y) for x, y in G_after.nodes()}
+    plt.sca(axes[1])
+    nx.draw(G_after, pos=pos_after, with_labels=False, node_size=10, width=2, edge_color='blue')
+    axes[1].set_xlim(-1, width)
+    axes[1].set_ylim(-1, height)
+    axes[1].invert_yaxis()
+    axes[1].set_title(title_after)
+
+    plt.show()
 def create_adjacency_mask(grid_shape):
     width, height = grid_shape
     size = width * height
@@ -357,11 +364,11 @@ def create_adjacency_mask(grid_shape):
     for i in range(width):
         for j in range(height):
             current_index = i * height + j
-            if j < height - 1:  # Horizontal connection
+            if j < height - 1: 
                 right_index = current_index + 1
                 mask[current_index, right_index] = 1
                 mask[right_index, current_index] = 1
-            if i < width - 1:  # Vertical connection
+            if i < width - 1: 
                 bottom_index = current_index + height
                 mask[current_index, bottom_index] = 1
                 mask[bottom_index, current_index] = 1
@@ -376,7 +383,6 @@ def discretenoise_neighbor(train_adj_b_vec, sigma, device, grid_shape):
     adjacency_mask = create_adjacency_mask(grid_shape)
     adjacency_mask = torch.tensor(adjacency_mask, dtype=torch.float32).to(device)
     
-    # Ensure the mask has the correct size for the input vector
     mask = adjacency_mask[np.triu_indices(size, k=1)]
     mask = torch.tensor(mask, dtype=torch.float32).to(device)
     
@@ -414,32 +420,108 @@ def create_adjacency_mask(grid_shape):
                 mask[(i + 1) * cols + j, i * cols + j] = 1
     return mask
 
-def main():
-    filename = 'dataset/usts_4.pkl'
-    width, height = 4, 4
-    batch_size = 16  
-    grid_shape = (4, 4)  
-    dataloader = get_dataloader(filename, width, height, batch_size)
-    ite = next(iter(dataloader))
-    print(ite.size())
 
-
+def batch_to_edge_vectors(batch_adj_matrices, grid_shape):
+    mask = create_adjacency_mask(grid_shape)
+    bs, num_nodes, _ = batch_adj_matrices.shape
+    num_edges = int(np.sum(mask) // 2)
     
-    print(ite.size())
-    print("Graphe initial:")
-    adj = upper_flatten_to_adj_matrix(ite, grid_shape[0]* grid_shape[1])
-    print(adj.size())
-    draw_maze_from_matrix(adj[0], grid_shape[0], grid_shape[1])
+    edge_vectors = np.zeros((bs, num_edges), dtype=float)
+    
+    edge_index = 0
+    for i in range(num_nodes):
+        for j in range(i + 1, num_nodes):
+            if mask[i, j] == 1:
+                edge_vectors[:, edge_index] = batch_adj_matrices[:, i, j]
+                edge_index += 1
+                
+    return edge_vectors
+
+def edge_vectors_to_batch(edge_vectors, grid_shape):
+    mask = create_adjacency_mask(grid_shape)
+    bs, num_edges = edge_vectors.shape
+    num_nodes = grid_shape[0] * grid_shape[1]
+    
+    batch_adj_matrices = np.zeros((bs, num_nodes, num_nodes), dtype=float)
+    
+    edge_index = 0
+    for i in range(num_nodes):
+        for j in range(i + 1, num_nodes):
+            if mask[i, j] == 1:
+                batch_adj_matrices[:, i, j] = edge_vectors[:, edge_index]
+                batch_adj_matrices[:, j, i] = edge_vectors[:, edge_index]
+                edge_index += 1
+    
+    return batch_adj_matrices
+
+def post_process_graph(adj_matrix, grid_shape):
+    num_nodes = adj_matrix.shape[0]
+    mask = create_adjacency_mask(grid_shape)
+
+    def dfs(node, visited, parent):
+        visited[node] = True
+        for neighbor in range(num_nodes):
+            if adj_matrix[node, neighbor] == 1:
+                if not visited[neighbor]:
+                    if dfs(neighbor, visited, node):
+                        return True
+                elif parent != neighbor:
+                    adj_matrix[node, neighbor] = 0
+                    adj_matrix[neighbor, node] = 0
+                    return True
+        return False
+
+    visited = [False] * num_nodes
+    for i in range(num_nodes):
+        if not visited[i]:
+            dfs(i, visited, -1)
+
+    def bfs(start_node):
+        queue = [start_node]
+        visited = [False] * num_nodes
+        visited[start_node] = True
+        while queue:
+            node = queue.pop(0)
+            for neighbor in range(num_nodes):
+                if adj_matrix[node, neighbor] == 1 and not visited[neighbor]:
+                    visited[neighbor] = True
+                    queue.append(neighbor)
+        return visited
+
+    visited = bfs(0)
+    for i in range(num_nodes):
+        if not visited[i]:
+            for j in range(num_nodes):
+                if i != j and adj_matrix[0, j] == 1 and mask[0, i] == 1:
+                    adj_matrix[0, i] = 1
+                    adj_matrix[i, 0] = 1
+                    visited = bfs(0)
+                    break
+
+    for i in range(num_nodes):
+        if np.sum(adj_matrix[i]) == 0:
+            for j in range(num_nodes):
+                if i != j and mask[i, j] == 1:
+                    adj_matrix[i, j] = 1
+                    adj_matrix[j, i] = 1
+                    break
+
+    visited = bfs(0)
+    while not all(visited):
+        for i in range(num_nodes):
+            if not visited[i]:
+                for j in range(num_nodes):
+                    if visited[j] and mask[i, j] == 1:
+                        adj_matrix[i, j] = 1
+                        adj_matrix[j, i] = 1
+                        visited = bfs(0)
+                        break
+                if visited[i]:
+                    break
+
+    return adj_matrix
 
 
-    device = torch.device("cpu")
-    sigma = torch.tensor([1], dtype=torch.float32).to(device)
-    train_adj_b_noisy_vec, grad_log_noise_vec = discretenoise_neighbor(ite, sigma, device, grid_shape)
-    print(train_adj_b_noisy_vec.size(), "aaa")
-    noisy_adj_matrix = upper_flatten_to_adj_matrix(train_adj_b_noisy_vec, grid_shape[0] * grid_shape[1])
-    print(noisy_adj_matrix.size())
-    print("Graphe après ajout de bruit:")
-    draw_maze_from_matrix(noisy_adj_matrix[0], grid_shape[0], grid_shape[1])
 
 
 

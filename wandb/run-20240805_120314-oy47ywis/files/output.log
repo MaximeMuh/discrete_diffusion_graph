@@ -1,0 +1,44 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:103: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/40, Loss: 82.4287233504038
+Epoch 2/40, Loss: 81.4469353206574
+Epoch 3/40, Loss: 82.85711203681097
+Epoch 4/40, Loss: 79.88743234059167
+Epoch 5/40, Loss: 78.99878408038427
+Epoch 6/40, Loss: 78.88779661390517
+Epoch 7/40, Loss: 82.36444978865366
+Epoch 8/40, Loss: 81.31586898319306
+Epoch 9/40, Loss: 77.50720699249752
+Epoch 10/40, Loss: 80.72935643271795
+Epoch 11/40, Loss: 78.99829265049526
+Epoch 12/40, Loss: 79.82445453462147
+Epoch 13/40, Loss: 81.21994866265192
+Epoch 14/40, Loss: 81.74452106536381
+Epoch 15/40, Loss: 80.33142071678525
+Epoch 16/40, Loss: 82.42639020889524
+Epoch 17/40, Loss: 79.04559059748574
+Epoch 18/40, Loss: 81.06163539583721
+Epoch 19/40, Loss: 77.96461050851005
+Epoch 20/40, Loss: 79.59963837880937
+Epoch 21/40, Loss: 82.0138204665411
+Epoch 22/40, Loss: 81.45726073734345
+Epoch 23/40, Loss: 80.85376612345378
+Epoch 24/40, Loss: 81.18784595671154
+Epoch 25/40, Loss: 78.32943973844013
+Epoch 26/40, Loss: 78.72803545755053
+Epoch 27/40, Loss: 79.85499403211806
+Epoch 28/40, Loss: 79.75940910218254
+Epoch 29/40, Loss: 79.55212414453901
+Epoch 30/40, Loss: 78.88654060969277
+Epoch 31/40, Loss: 79.63266651214116
+Epoch 32/40, Loss: 77.9654079618908
+Epoch 33/40, Loss: 79.25091958424402
+Epoch 34/40, Loss: 79.5367547292558
+Epoch 35/40, Loss: 80.25125933450366
+Epoch 36/40, Loss: 79.04327477349176
+Epoch 37/40, Loss: 78.74277145143539
+Epoch 38/40, Loss: 78.99554431249224
+Epoch 39/40, Loss: 78.61462953355577
+Epoch 40/40, Loss: 80.17206658257379
