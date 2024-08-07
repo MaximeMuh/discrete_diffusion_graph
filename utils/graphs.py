@@ -1,5 +1,6 @@
 import sys
 import os
+import time
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import torch
 import torch.nn as nn
@@ -332,7 +333,7 @@ def draw_maze_from_matrix(adj_matrix, width, height, title='Maze'):
     plt.show()
 
 
-def draw_maze_before_after(adj_matrix, width, height, grid_shape, title_before='Before Processing', title_after='After Processing'):
+def draw_maze_before_after(adj_matrix, width, height, grid_shape, title_before='Before Processing', title_after='After Processing', draw = True):
     fig, axes = plt.subplots(1, 2, figsize=(8, 4))
 
     G_before = graph_from_adjacency_matrix(adj_matrix, width, height)
@@ -344,7 +345,7 @@ def draw_maze_before_after(adj_matrix, width, height, grid_shape, title_before='
     axes[0].invert_yaxis()
     axes[0].set_title(title_before)
 
-    adj_matrix_processed = post_process_graph(adj_matrix, grid_shape=grid_shape)
+    adj_matrix_processed,time,count = post_process_graph(adj_matrix, grid_shape=grid_shape)
 
     G_after = graph_from_adjacency_matrix(adj_matrix_processed, width, height)
     pos_after = {(x, y): (x, y) for x, y in G_after.nodes()}
@@ -353,9 +354,15 @@ def draw_maze_before_after(adj_matrix, width, height, grid_shape, title_before='
     axes[1].set_xlim(-1, width)
     axes[1].set_ylim(-1, height)
     axes[1].invert_yaxis()
-    axes[1].set_title(title_after)
+    axes[1].set_title(title_after + f' ({count} changes)'+f' ({time:.4f} s)') 
 
-    plt.show()
+    if draw:
+        plt.show()
+    if not draw:
+        plt.close()
+
+    return time, count
+
 def create_adjacency_mask(grid_shape):
     width, height = grid_shape
     size = width * height
@@ -454,11 +461,28 @@ def edge_vectors_to_batch(edge_vectors, grid_shape):
     
     return batch_adj_matrices
 
+
+def gen_init_data(batch_size, grid_shape, device):
+    size = grid_shape[0] * grid_shape[1]
+    adjacency_mask = create_adjacency_mask(grid_shape)
+    adjacency_mask = torch.tensor(adjacency_mask, dtype=torch.float32).to(device)
+    
+    bernoulli_adj = torch.zeros(batch_size, size, size).to(device)
+    bernoulli_adj += adjacency_mask.unsqueeze(0) * 0.5  # Probability of 0.5 for each neighbor
+
+    noise_upper = torch.bernoulli(bernoulli_adj).triu(diagonal=1)
+    noise_lower = noise_upper.transpose(-1, -2)
+    initial_matrix = noise_lower + noise_upper
+    return initial_matrix
+
 def post_process_graph(adj_matrix, grid_shape):
+    start_time = time.time()
     num_nodes = adj_matrix.shape[0]
     mask = create_adjacency_mask(grid_shape)
+    change_count = 0
 
     def dfs(node, visited, parent):
+        nonlocal change_count
         visited[node] = True
         for neighbor in range(num_nodes):
             if adj_matrix[node, neighbor] == 1:
@@ -468,6 +492,7 @@ def post_process_graph(adj_matrix, grid_shape):
                 elif parent != neighbor:
                     adj_matrix[node, neighbor] = 0
                     adj_matrix[neighbor, node] = 0
+                    change_count += 1
                     return True
         return False
 
@@ -495,6 +520,7 @@ def post_process_graph(adj_matrix, grid_shape):
                 if i != j and adj_matrix[0, j] == 1 and mask[0, i] == 1:
                     adj_matrix[0, i] = 1
                     adj_matrix[i, 0] = 1
+                    change_count += 1
                     visited = bfs(0)
                     break
 
@@ -504,6 +530,7 @@ def post_process_graph(adj_matrix, grid_shape):
                 if i != j and mask[i, j] == 1:
                     adj_matrix[i, j] = 1
                     adj_matrix[j, i] = 1
+                    change_count += 1
                     break
 
     visited = bfs(0)
@@ -514,13 +541,16 @@ def post_process_graph(adj_matrix, grid_shape):
                     if visited[j] and mask[i, j] == 1:
                         adj_matrix[i, j] = 1
                         adj_matrix[j, i] = 1
+                        change_count += 1
                         visited = bfs(0)
                         break
                 if visited[i]:
                     break
 
-    return adj_matrix
+    end_time = time.time()
+    elapsed_time = end_time - start_time
 
+    return adj_matrix, elapsed_time, change_count
 
 
 

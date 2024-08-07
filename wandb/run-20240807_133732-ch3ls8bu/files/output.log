@@ -1,0 +1,67 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:86: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/2000, Loss: 33.356300808134534
+New best model saved with loss: 33.356300808134534
+Epoch 2/2000, Loss: 30.11397693270729
+New best model saved with loss: 30.11397693270729
+Epoch 3/2000, Loss: 30.68876163543217
+Epoch 4/2000, Loss: 30.725773402622767
+Epoch 5/2000, Loss: 30.68101017058842
+Epoch 6/2000, Loss: 30.34079324631464
+Epoch 7/2000, Loss: 30.865763240390354
+Epoch 8/2000, Loss: 31.17434745364719
+Epoch 9/2000, Loss: 30.676070682586186
+Epoch 10/2000, Loss: 30.875700405665807
+Epoch 11/2000, Loss: 30.58705656869071
+Epoch 12/2000, Loss: 30.855201902843657
+Epoch 13/2000, Loss: 30.751976527864972
+Epoch 14/2000, Loss: 30.52299776531401
+Epoch 15/2000, Loss: 30.619836080641974
+Epoch 16/2000, Loss: 31.031043461390905
+Epoch 17/2000, Loss: 30.29289424230182
+Epoch 18/2000, Loss: 30.43464412386455
+Epoch 19/2000, Loss: 30.514597695971293
+Epoch 20/2000, Loss: 31.04507891337077
+Epoch 21/2000, Loss: 30.978618092007107
+Epoch 22/2000, Loss: 31.060916628156388
+Epoch 23/2000, Loss: 30.862894754561168
+Epoch 24/2000, Loss: 30.48985731034052
+Epoch 25/2000, Loss: 30.591260804070366
+Epoch 26/2000, Loss: 31.09120484003945
+Epoch 27/2000, Loss: 30.719363015795512
+Epoch 28/2000, Loss: 30.594021343049548
+Epoch 29/2000, Loss: 30.724618593851726
+Epoch 30/2000, Loss: 30.691362471807572
+Epoch 31/2000, Loss: 30.58282735612657
+Epoch 32/2000, Loss: 30.60542628878639
+Epoch 33/2000, Loss: 30.421191276065887
+Epoch 34/2000, Loss: 30.38963620624845
+Epoch 35/2000, Loss: 30.55006372360956
+Epoch 36/2000, Loss: 30.615264498998247
+Epoch 37/2000, Loss: 30.8179233036344
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=2000, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 50, in fit
+    score_batch = model(A=A, node_features=train_noise_adj_b_chunked[i].to(device), mask=mask, noiselevel=sigma.item()).to(device)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 262, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 312, in forward_cat
+    u = masked_instance_norm2D(u, mask)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/util/model_helper.py", line 184, in masked_instance_norm2D
+    var_term = ((x - mean.unsqueeze(1).unsqueeze(1).expand_as(x)) * mask)**2  # (N,L,L,C)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^~
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/_tensor.py", line 34, in wrapped
+    @functools.wraps(f, assigned=assigned)
+KeyboardInterrupt

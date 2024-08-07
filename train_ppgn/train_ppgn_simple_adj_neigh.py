@@ -15,7 +15,7 @@ from utils.graphs import discretenoise, loss_func_bce, upper_flatten_to_adj_matr
 
 filename = 'dataset/usts_5.pkl'
 width, height = 5, 5
-batch_size = 32
+batch_size = 16
 grid_shape = (width, height)
 dataloader = get_dataloader_adj(filename, width, height, batch_size)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -28,7 +28,7 @@ def fit(model, optimizer, dataloader, max_epoch=20, device=device):
     optimizer.zero_grad()
     scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.95)
     best_loss = float('inf')
-    best_model_path = 'best_model_adj_neigh_cycle_conn_5.pth'
+    best_model_path = 'models_ppgn/best_model_adj_neigh_cycle_conn_5_2.pth'
     
     for epoch in range(max_epoch):
         train_losses = []
@@ -81,7 +81,7 @@ model = Powerful(
     hidden_final=64,
     dropout_p=0.000001,
     simplified=False,
-    n_nodes=25,
+    n_nodes=width * height,
     device=device,
     normalization="instance",
     cat_output=True,

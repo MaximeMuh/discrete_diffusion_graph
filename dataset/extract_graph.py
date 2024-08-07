@@ -361,19 +361,4 @@ def visualize_graph(data, width, height):
         print(vector.size())    
         visualize_graph_from_vector(vector.numpy(), width, height)
 
-def main():
-    filename = 'dataset/usts_6.pkl'
-    width, height = 6, 6
-    batch_size = 1000 
 
-    dataloader = get_dataloader(filename, width, height, batch_size)
-    ite = next(iter(dataloader))
-    print(ite.size())
-    vector = ite[100]
-    adjacency_matrix = vector_to_upper_triangular(vector.numpy(), width * height)
-    print(adjacency_matrix)
-    g = graph_from_adjacency_matrix(adjacency_matrix, width, height)
-    draw_maze(g, width, height)
-
-if __name__ == "__main__":
-    main()
