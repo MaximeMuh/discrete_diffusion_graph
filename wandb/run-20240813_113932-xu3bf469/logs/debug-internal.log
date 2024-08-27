@@ -1,0 +1,1431 @@
+2024-08-13 11:39:32,678 INFO    StreamThr :119604 [internal.py:wandb_internal():85] W&B internal server running at pid: 119604, started at: 2024-08-13 11:39:32.678119
+2024-08-13 11:39:32,679 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status
+2024-08-13 11:39:32,683 INFO    WriterThread:119604 [datastore.py:open_for_write():87] open: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/run-xu3bf469.wandb
+2024-08-13 11:39:32,684 DEBUG   SenderThread:119604 [sender.py:send():379] send: header
+2024-08-13 11:39:32,689 DEBUG   SenderThread:119604 [sender.py:send():379] send: run
+2024-08-13 11:39:34,014 INFO    SenderThread:119604 [dir_watcher.py:__init__():211] watching files in: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files
+2024-08-13 11:39:34,014 INFO    SenderThread:119604 [sender.py:_start_run_threads():1188] run started: xu3bf469 with start time 1723541972.678435
+2024-08-13 11:39:34,020 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: check_version
+2024-08-13 11:39:34,020 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: check_version
+2024-08-13 11:39:34,131 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: run_start
+2024-08-13 11:39:34,150 DEBUG   HandlerThread:119604 [system_info.py:__init__():26] System info init
+2024-08-13 11:39:34,150 DEBUG   HandlerThread:119604 [system_info.py:__init__():41] System info init done
+2024-08-13 11:39:34,150 INFO    HandlerThread:119604 [system_monitor.py:start():194] Starting system monitor
+2024-08-13 11:39:34,150 INFO    SystemMonitor:119604 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-13 11:39:34,150 INFO    HandlerThread:119604 [system_monitor.py:probe():214] Collecting system info
+2024-08-13 11:39:34,151 INFO    SystemMonitor:119604 [interfaces.py:start():188] Started cpu monitoring
+2024-08-13 11:39:34,151 INFO    SystemMonitor:119604 [interfaces.py:start():188] Started disk monitoring
+2024-08-13 11:39:34,152 INFO    SystemMonitor:119604 [interfaces.py:start():188] Started gpu monitoring
+2024-08-13 11:39:34,152 INFO    SystemMonitor:119604 [interfaces.py:start():188] Started memory monitoring
+2024-08-13 11:39:34,152 INFO    SystemMonitor:119604 [interfaces.py:start():188] Started network monitoring
+2024-08-13 11:39:34,174 DEBUG   HandlerThread:119604 [system_info.py:probe():152] Probing system
+2024-08-13 11:39:34,176 DEBUG   HandlerThread:119604 [system_info.py:_probe_git():137] Probing git
+2024-08-13 11:39:34,184 DEBUG   HandlerThread:119604 [system_info.py:_probe_git():145] Probing git done
+2024-08-13 11:39:34,184 DEBUG   HandlerThread:119604 [system_info.py:probe():200] Probing system done
+2024-08-13 11:39:34,184 DEBUG   HandlerThread:119604 [system_monitor.py:probe():223] {'os': 'Linux-5.14.0-427.26.1.el9_4.x86_64-x86_64-with-glibc2.34', 'python': '3.11.9', 'heartbeatAt': '2024-08-13T09:39:34.174940', 'startedAt': '2024-08-13T09:39:32.660137', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py', 'codePathLocal': 'train_ppgn/train_ppgn_simple_adj_neigh.py', 'codePath': 'train_ppgn/train_ppgn_simple_adj_neigh.py', 'git': {'remote': 'git@github.com:MaximeMuh/discrete_diffusion_graph.git', 'commit': '00293c42260a603d03626ed291cebcc4e0ef984e'}, 'email': 'maxime.muhlethaler@eleves.enpc.fr', 'root': '/home/mmuhleth/discrete_diffusion_graph', 'host': 'gpu012', 'username': 'mmuhleth', 'executable': '/home/mmuhleth/miniconda3/envs/py38/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 2841.3457968750004, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 3538.046, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 3538.002, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2854.979, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 3536.869, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}, {'current': 2794.729, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 125.80834579467773, 'used': 2.9167404174804688}}, 'gpu': 'NVIDIA A100-SXM4-80GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}], 'memory': {'total': 251.61669158935547}}
+2024-08-13 11:39:34,184 INFO    HandlerThread:119604 [system_monitor.py:probe():224] Finished collecting system info
+2024-08-13 11:39:34,184 INFO    HandlerThread:119604 [system_monitor.py:probe():227] Publishing system info
+2024-08-13 11:39:34,184 DEBUG   HandlerThread:119604 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-08-13 11:39:35,015 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/conda-environment.yaml
+2024-08-13 11:39:35,201 DEBUG   HandlerThread:119604 [system_info.py:_save_conda():224] Saving conda packages done
+2024-08-13 11:39:35,202 INFO    HandlerThread:119604 [system_monitor.py:probe():229] Finished publishing system info
+2024-08-13 11:39:35,204 DEBUG   SenderThread:119604 [sender.py:send():379] send: files
+2024-08-13 11:39:35,204 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-08-13 11:39:35,259 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: python_packages
+2024-08-13 11:39:35,259 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: python_packages
+2024-08-13 11:39:35,260 DEBUG   SenderThread:119604 [sender.py:send():379] send: telemetry
+2024-08-13 11:39:35,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:35,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:39:35,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:39:35,763 INFO    wandb-upload_0:119604 [upload_job.py:push():130] Uploaded file /tmp/tmpiux1poj0wandb/gs0j3f9o-wandb-metadata.json
+2024-08-13 11:39:36,015 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/conda-environment.yaml
+2024-08-13 11:39:36,015 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/requirements.txt
+2024-08-13 11:39:36,015 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-metadata.json
+2024-08-13 11:39:36,016 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:39:36,259 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:37,259 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:38,016 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:39:38,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:38,541 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:39:39,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:40,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:41,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:42,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:43,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:44,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:39:44,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:45,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:46,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:46,366 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:39:46,366 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:39:46,366 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:39:46,368 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:39:47,021 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_created():271] file/dir created: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:39:47,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:48,021 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:39:48,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:49,022 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:39:49,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:49,368 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:39:50,259 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:39:50,259 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:39:50,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:51,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:52,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:53,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:54,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:54,428 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:39:55,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:56,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:57,201 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:39:57,201 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:39:57,201 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:39:57,203 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:39:57,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:58,025 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:39:58,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:39:59,027 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:39:59,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:00,242 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:00,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:01,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:02,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:03,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:04,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:05,259 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:40:05,259 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:40:05,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:05,407 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:06,029 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/config.yaml
+2024-08-13 11:40:06,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:07,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:07,969 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:40:07,969 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:40:07,969 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:40:07,971 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:40:08,030 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:40:08,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:09,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:10,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:11,031 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:40:11,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:11,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:12,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:13,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:14,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:15,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:16,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:16,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:17,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:18,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:18,840 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:40:18,840 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:40:18,840 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:40:18,842 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:40:19,034 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:40:19,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:20,259 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:40:20,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:40:20,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:21,035 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:40:21,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:21,479 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:22,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:23,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:24,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:25,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:26,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:27,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:27,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:28,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:29,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:29,579 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:40:29,580 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:40:29,580 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:40:29,581 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:40:30,039 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:40:30,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:31,039 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:40:31,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:32,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:32,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:33,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:34,153 DEBUG   SystemMonitor:119604 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-13 11:40:34,153 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:40:34,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:35,259 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:40:35,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:40:35,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:36,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:37,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:37,444 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:38,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:39,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:40,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:40,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:40:40,315 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:40:40,315 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:40:40,316 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:40:41,043 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:40:41,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:42,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:43,044 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:40:43,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:43,356 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:44,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:45,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:46,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:47,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:48,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:49,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:49,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:50,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:40:50,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:40:50,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:51,145 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:40:51,145 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:40:51,145 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:40:51,147 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:40:51,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:52,048 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:40:52,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:53,048 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:40:53,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:54,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:55,186 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:40:55,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:56,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:57,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:58,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:40:59,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:00,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:00,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:01,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:01,851 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:41:01,852 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:41:01,852 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:41:01,853 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:41:02,051 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:41:02,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:03,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:04,154 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:41:04,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:05,052 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:41:05,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:41:05,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:41:05,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:05,403 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:06,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:07,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:08,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:09,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:10,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:11,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:11,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:12,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:12,669 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:41:12,670 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:41:12,670 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:41:12,671 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:41:13,055 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:41:13,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:14,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:15,056 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:41:15,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:16,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:16,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:17,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:18,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:19,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:20,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:41:20,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:41:20,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:21,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:21,467 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:22,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:23,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:23,355 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:41:23,355 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:41:23,355 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:41:23,357 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:41:24,059 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:41:24,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:25,059 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:41:25,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:26,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:27,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:27,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:28,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:29,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:30,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:31,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:32,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:33,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:33,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:34,155 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:41:34,180 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:41:34,180 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:41:34,181 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:41:34,181 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:41:34,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:35,062 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:41:35,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:41:35,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:41:35,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:36,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:37,063 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:41:37,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:38,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:38,446 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:39,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:40,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:41,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:42,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:43,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:44,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:44,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:44,869 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:41:44,870 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:41:44,870 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:41:44,871 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:41:45,066 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:41:45,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:46,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:47,067 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:41:47,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:48,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:49,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:49,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:50,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:41:50,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:41:50,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:51,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:52,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:53,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:54,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:54,456 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:41:55,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:55,662 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:41:55,663 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:41:55,663 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:41:55,664 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:41:56,070 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:41:56,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:57,071 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:41:57,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:58,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:59,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:41:59,703 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:00,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:01,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:02,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:03,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:04,155 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:42:04,270 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:05,156 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:05,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:42:05,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:42:05,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:06,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:06,363 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:42:06,363 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:42:06,364 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:42:06,365 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:42:07,074 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:42:07,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:08,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:09,075 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:42:09,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:10,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:10,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:11,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:12,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:13,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:14,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:15,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:15,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:16,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:17,158 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:42:17,158 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:42:17,158 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:42:17,160 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:42:17,271 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:18,079 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:42:18,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:19,079 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:42:19,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:20,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:42:20,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:42:20,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:20,477 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:21,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:22,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:23,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:24,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:25,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:26,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:26,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:27,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:27,861 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:42:27,861 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:42:27,862 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:42:27,863 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:42:28,082 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:42:28,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:29,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:30,272 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:31,083 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:42:31,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:32,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:32,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:33,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:34,156 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:42:34,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:35,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:42:35,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:42:35,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:36,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:37,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:37,495 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:38,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:38,559 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:42:38,560 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:42:38,560 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:42:38,561 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:42:39,086 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:42:39,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:40,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:41,087 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:42:41,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:42,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:43,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:43,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:44,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:45,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:46,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:47,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:48,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:48,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:49,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:49,351 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:42:49,351 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:42:49,351 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:42:49,353 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:42:50,090 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:42:50,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:42:50,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:42:50,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:51,091 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:42:51,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:52,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:53,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:53,496 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:54,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:55,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:56,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:57,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:58,274 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:42:59,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:42:59,275 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:00,039 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:43:00,039 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:43:00,039 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:43:00,040 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:43:00,093 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:43:00,275 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:01,275 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:02,275 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:03,095 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:43:03,275 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:04,157 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:43:04,296 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:05,157 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:05,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:43:05,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:43:05,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:06,296 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:07,296 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:08,296 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:09,296 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:10,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:10,296 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:10,822 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:43:10,823 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:43:10,823 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:43:10,825 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:43:11,098 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:43:11,296 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:12,296 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:13,099 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:43:13,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:14,296 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:15,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:15,296 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:16,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:17,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:18,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:19,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:20,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:43:20,260 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:43:20,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:20,419 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:21,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:21,512 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:43:21,513 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:43:21,513 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:43:21,514 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:43:22,102 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:43:22,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:23,102 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:43:23,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:24,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:25,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:26,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:26,297 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:27,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:28,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:29,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:30,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:31,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:31,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:32,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:32,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:43:32,303 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:43:32,303 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:43:32,304 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:43:33,105 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:43:33,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:34,157 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:43:34,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:35,107 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:43:35,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:43:35,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:43:35,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:36,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:36,457 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:37,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:38,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:39,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:40,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:41,298 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:42,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:42,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:42,992 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:43:42,992 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:43:42,992 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:43:42,993 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:43:43,109 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:43:43,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:44,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:45,110 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:43:45,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:46,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:47,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:47,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:48,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:49,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:50,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:43:50,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:43:50,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:51,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:52,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:52,446 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:53,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:53,785 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:43:53,785 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:43:53,785 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:43:53,786 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:43:54,113 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:43:54,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:55,114 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:43:55,299 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:56,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:57,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:58,263 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:43:58,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:43:59,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:00,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:01,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:02,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:03,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:03,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:04,158 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:44:04,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:04,480 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:44:04,481 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:44:04,481 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:44:04,482 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:44:05,118 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:44:05,260 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:44:05,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:44:05,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:06,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:07,119 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:44:07,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:08,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:08,503 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:09,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:10,300 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:11,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:12,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:13,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:14,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:14,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:15,168 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:44:15,168 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:44:15,168 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:44:15,169 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:44:15,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:16,123 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:44:16,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:17,123 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:44:17,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:18,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:19,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:20,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:44:20,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:44:20,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:20,420 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:21,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:22,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:23,301 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:24,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:25,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:25,947 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:44:25,947 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:44:25,948 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:44:25,948 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:25,949 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:44:26,126 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:44:26,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:27,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:28,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:29,128 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:44:29,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:30,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:31,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:31,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:32,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:33,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:34,159 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:44:34,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:35,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:44:35,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:44:35,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:36,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:36,469 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:36,643 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:44:36,644 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:44:36,644 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:44:36,645 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:44:37,131 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:44:37,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:38,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:39,132 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:44:39,302 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:40,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:41,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:42,264 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:42,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:43,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:44,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:45,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:46,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:47,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:47,448 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:44:47,448 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:44:47,449 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:44:47,449 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:47,450 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:44:48,135 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:44:48,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:49,136 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:44:49,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:50,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:44:50,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:44:50,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:51,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:52,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:53,303 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:53,422 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:54,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:55,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:56,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:57,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:58,138 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:44:58,138 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:44:58,138 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:44:58,140 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:44:58,140 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:44:58,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:44:59,179 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:44:59,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:00,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:01,141 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:45:01,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:02,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:03,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:04,159 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:45:04,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:05,160 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:05,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:45:05,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:45:05,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:06,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:07,304 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:08,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:08,920 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:45:08,921 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:45:08,921 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:45:08,922 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:45:09,144 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:45:09,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:10,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:10,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:11,146 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:45:11,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:12,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:13,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:14,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:15,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:15,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:16,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:17,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:18,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:19,305 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:19,619 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:45:19,620 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:45:19,620 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:45:19,621 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:45:20,149 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:45:20,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:45:20,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:45:20,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:20,464 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:21,149 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:45:21,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:22,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:23,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:24,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:25,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:26,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:26,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:27,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:28,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:29,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:30,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:30,413 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:45:30,413 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:45:30,414 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:45:30,415 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:45:31,153 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:45:31,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:31,454 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:32,306 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:33,154 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:45:33,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:34,160 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:45:34,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:35,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:45:35,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:45:35,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:36,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:36,481 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:37,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:38,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:39,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:40,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:41,108 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:45:41,108 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:45:41,108 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:45:41,109 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:45:41,157 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:45:41,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:42,149 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:42,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:43,158 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:45:43,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:44,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:45,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:46,307 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:47,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:47,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:48,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:49,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:50,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:45:50,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:45:50,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:51,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:51,890 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:45:51,890 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:45:51,890 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:45:51,891 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:45:52,161 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:45:52,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:52,932 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:53,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:54,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:55,163 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:45:55,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:56,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:57,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:58,265 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:45:58,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:45:59,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:00,308 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:01,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:02,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:02,586 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:46:02,586 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:46:02,586 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:46:02,588 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:46:03,166 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:46:03,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:03,627 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:04,161 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:46:04,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:05,167 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:46:05,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:46:05,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:46:05,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:06,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:07,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:08,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:09,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:09,403 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:10,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:11,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:12,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:13,285 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:46:13,285 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:46:13,285 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:46:13,286 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:46:13,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:14,170 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:46:14,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:15,171 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:46:15,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:15,309 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:16,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:17,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:18,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:19,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:20,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:46:20,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:46:20,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:20,479 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:21,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:22,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:23,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:24,085 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:46:24,085 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:46:24,085 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:46:24,087 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:46:24,174 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:46:24,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:25,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:26,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:26,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:27,175 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:46:27,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:28,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:29,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:30,310 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:31,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:31,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:32,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:33,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:34,161 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:46:34,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:34,771 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:46:34,771 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:46:34,771 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:46:34,772 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:46:35,178 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:46:35,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:46:35,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:46:35,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:36,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:36,501 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:37,179 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:46:37,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:38,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:39,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:40,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:41,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:42,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:42,311 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:43,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:44,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:45,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:45,550 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:46:45,551 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:46:45,551 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:46:45,551 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:46:46,182 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:46:46,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:47,183 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:46:47,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:47,591 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:48,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:49,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:50,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:46:50,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:46:50,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:51,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:52,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:53,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:53,419 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:54,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:55,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:56,251 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:46:56,251 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:46:56,251 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:46:56,252 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:46:56,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:57,186 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:46:57,312 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:58,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:46:59,187 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:46:59,292 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:46:59,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:00,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:01,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:02,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:03,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:04,162 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:47:04,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:05,162 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:47:05,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:47:05,261 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:47:05,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:06,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:07,031 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:47:07,031 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:47:07,032 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:47:07,032 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:47:07,190 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:47:07,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:08,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:09,191 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:47:09,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:10,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:47:10,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:11,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:12,313 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:13,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:14,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:15,266 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:47:15,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:16,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:17,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:17,725 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:47:17,725 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:47:17,725 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:47:17,726 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:47:18,195 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:47:18,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:19,195 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:47:19,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:20,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:47:20,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:47:20,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:20,481 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:47:21,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:22,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:23,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:24,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:25,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:26,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:47:26,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:27,314 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:28,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:28,506 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:47:28,506 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:47:28,506 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:47:28,507 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:47:29,199 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:47:29,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:30,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:31,200 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:47:31,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:32,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:47:32,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:33,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:34,163 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:47:34,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:35,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:47:35,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:47:35,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:36,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:37,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:37,404 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:47:38,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:39,200 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:47:39,200 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:47:39,200 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:47:39,201 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:47:39,203 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:47:39,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:40,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:41,203 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:47:41,315 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:42,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:43,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:47:43,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:44,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:45,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:46,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:47,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:48,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:49,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:47:49,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:49,994 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:47:49,995 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:47:49,995 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:47:49,996 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:47:50,206 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:47:50,261 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:47:50,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:47:50,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:51,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:52,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:53,208 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:47:53,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:54,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:54,466 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:47:55,316 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:56,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:57,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:58,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:47:59,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:00,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:00,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:00,684 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:48:00,685 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:48:00,685 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:48:00,686 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:48:01,210 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:48:01,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:02,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:03,211 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:48:03,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:04,163 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:48:04,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:05,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:48:05,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:48:05,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:05,418 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:06,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:07,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:08,317 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:09,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:10,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:11,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:11,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:11,373 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:48:11,373 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:48:11,373 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:48:11,374 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:48:12,215 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:48:12,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:13,215 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:48:13,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:14,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:15,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:16,267 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:16,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:17,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:18,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:19,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:20,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:48:20,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:48:20,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:21,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:21,473 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:22,158 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:48:22,159 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:48:22,159 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:48:22,160 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:48:22,218 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:48:22,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:23,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:24,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:25,219 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:48:25,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:26,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:27,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:27,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:28,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:29,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:30,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:31,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:32,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:32,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:32,850 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:48:32,850 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:48:32,850 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:48:32,851 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:48:33,222 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:48:33,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:34,164 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:48:34,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:35,223 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:48:35,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:48:35,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:48:35,319 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:36,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:37,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:37,443 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:38,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:39,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:40,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:41,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:42,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:43,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:43,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:43,636 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:48:43,636 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:48:43,636 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:48:43,637 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:48:44,226 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:48:44,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:45,226 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:48:45,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:46,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:47,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:48,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:48,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:49,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:50,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:48:50,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:48:50,320 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:51,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:52,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:53,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:53,505 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:54,318 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:48:54,319 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:48:54,319 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:48:54,320 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:48:54,359 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:55,229 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:48:55,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:56,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:57,230 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:48:57,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:58,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:48:59,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:48:59,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:00,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:01,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:02,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:03,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:04,165 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:49:04,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:05,097 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:49:05,097 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:49:05,097 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:49:05,097 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:49:05,098 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:49:05,233 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:49:05,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:49:05,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:49:05,321 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:06,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:07,234 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:49:07,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:08,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:09,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:10,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:49:10,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:11,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:12,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:13,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:14,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:15,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:15,790 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:49:15,791 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:49:15,791 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:49:15,791 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:49:15,792 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:49:16,237 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:49:16,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:17,238 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:49:17,322 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:18,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:19,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:20,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:49:20,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:49:20,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:21,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:21,503 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:49:22,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:23,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:24,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:25,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:26,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:26,608 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:49:26,609 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:49:26,609 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:49:26,609 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:49:26,610 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:49:27,242 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:49:27,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:28,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:29,243 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:49:29,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:30,323 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:31,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:32,268 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:49:32,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:33,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:34,165 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:49:34,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:35,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:49:35,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:49:35,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:36,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:37,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:37,347 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:49:37,347 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:49:37,348 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:49:37,348 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:49:37,349 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:49:38,246 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:49:38,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:39,246 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:49:39,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:40,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:41,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:42,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:43,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:49:43,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:44,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:45,324 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:46,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:47,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:48,173 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:49:48,173 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:49:48,173 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:49:48,174 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:49:48,249 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:49:48,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:49,214 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:49:49,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:50,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:49:50,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:49:50,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:51,251 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:49:51,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:52,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:53,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:54,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:54,504 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:49:55,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:56,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:57,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:58,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:58,908 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:49:58,908 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:49:58,908 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:49:58,910 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:49:59,253 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:49:59,325 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:49:59,949 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:50:00,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:01,255 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:50:01,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:02,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:03,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:04,166 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:50:04,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:05,166 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:50:05,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:50:05,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:50:05,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:06,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:07,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:08,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:09,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:09,640 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:50:09,640 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:50:09,640 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:50:09,642 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:50:10,258 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:50:10,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:50:10,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:11,259 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:50:11,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:12,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:13,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:14,326 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:15,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:50:15,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:16,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:17,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:18,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:19,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:20,262 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-13 11:50:20,262 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: stop_status
+2024-08-13 11:50:20,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:20,467 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:50:20,473 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-13 11:50:20,473 DEBUG   SenderThread:119604 [sender.py:send():379] send: history
+2024-08-13 11:50:20,473 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: summary_record
+2024-08-13 11:50:20,474 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:50:21,263 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:50:21,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:22,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:23,263 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:50:23,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:24,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:25,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:26,269 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:50:26,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:27,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:28,327 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:29,094 DEBUG   SenderThread:119604 [sender.py:send():379] send: exit
+2024-08-13 11:50:29,094 INFO    SenderThread:119604 [sender.py:send_exit():586] handling exit code: 255
+2024-08-13 11:50:29,094 INFO    SenderThread:119604 [sender.py:send_exit():588] handling runtime: 654
+2024-08-13 11:50:29,095 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:50:29,095 INFO    SenderThread:119604 [sender.py:send_exit():594] send defer
+2024-08-13 11:50:29,095 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:29,095 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 0
+2024-08-13 11:50:29,095 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:29,095 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-08-13 11:50:29,095 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 1
+2024-08-13 11:50:29,095 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:29,095 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 1
+2024-08-13 11:50:29,095 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:29,095 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-08-13 11:50:29,095 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 2
+2024-08-13 11:50:29,095 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:29,095 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 2
+2024-08-13 11:50:29,095 INFO    HandlerThread:119604 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-13 11:50:29,096 DEBUG   SystemMonitor:119604 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-13 11:50:29,096 INFO    HandlerThread:119604 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-13 11:50:29,096 DEBUG   SystemMonitor:119604 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-13 11:50:29,096 INFO    HandlerThread:119604 [interfaces.py:finish():200] Joined disk monitor
+2024-08-13 11:50:29,190 INFO    HandlerThread:119604 [interfaces.py:finish():200] Joined gpu monitor
+2024-08-13 11:50:29,190 INFO    HandlerThread:119604 [interfaces.py:finish():200] Joined memory monitor
+2024-08-13 11:50:29,191 INFO    HandlerThread:119604 [interfaces.py:finish():200] Joined network monitor
+2024-08-13 11:50:29,191 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:29,191 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-08-13 11:50:29,191 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 3
+2024-08-13 11:50:29,191 DEBUG   SenderThread:119604 [sender.py:send():379] send: stats
+2024-08-13 11:50:29,191 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:29,191 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 3
+2024-08-13 11:50:29,191 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:29,191 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-08-13 11:50:29,191 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 4
+2024-08-13 11:50:29,191 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:29,192 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 4
+2024-08-13 11:50:29,192 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:29,192 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-08-13 11:50:29,192 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 5
+2024-08-13 11:50:29,192 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:29,192 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 5
+2024-08-13 11:50:29,192 DEBUG   SenderThread:119604 [sender.py:send():379] send: summary
+2024-08-13 11:50:29,193 INFO    SenderThread:119604 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-13 11:50:29,193 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:29,193 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-08-13 11:50:29,193 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 6
+2024-08-13 11:50:29,193 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:29,193 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 6
+2024-08-13 11:50:29,193 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:29,193 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-08-13 11:50:29,193 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 7
+2024-08-13 11:50:29,193 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: status_report
+2024-08-13 11:50:29,193 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:29,193 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 7
+2024-08-13 11:50:29,193 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:29,193 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-08-13 11:50:29,265 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:50:30,094 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 11:50:30,266 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:50:30,424 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 8
+2024-08-13 11:50:30,424 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 11:50:30,424 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:30,425 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 8
+2024-08-13 11:50:30,425 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:30,425 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-08-13 11:50:30,425 INFO    SenderThread:119604 [job_builder.py:build():440] Attempting to build job artifact
+2024-08-13 11:50:30,425 INFO    SenderThread:119604 [job_builder.py:_get_source_type():569] is repo sourced job
+2024-08-13 11:50:30,441 INFO    SenderThread:119604 [job_builder.py:build():545] adding wandb-job metadata file
+2024-08-13 11:50:30,444 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 9
+2024-08-13 11:50:30,444 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:30,444 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 9
+2024-08-13 11:50:30,445 DEBUG   SenderThread:119604 [sender.py:send():379] send: artifact
+2024-08-13 11:50:31,094 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 11:50:31,267 INFO    Thread-12 :119604 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:50:31,442 INFO    wandb-upload_1:119604 [upload_job.py:push():85] Skipped uploading /home/mmuhleth/.local/share/wandb/artifacts/staging/tmplsb7d5cf
+2024-08-13 11:50:32,348 INFO    wandb-upload_0:119604 [upload_job.py:push():88] Uploaded file /tmp/tmp138x5wc0/wandb-job.json
+2024-08-13 11:50:33,306 INFO    SenderThread:119604 [sender.py:send_artifact():1530] sent artifact job-git_github.com_MaximeMuh_discrete_diffusion_graph.git_train_ppgn_train_ppgn_simple_adj_neigh.py - {'id': 'QXJ0aWZhY3Q6MTE0ODA4MTQwOQ==', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjM4MjgyMDg5OA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTE0ODA2Nzk4OQ==', 'versionIndex': 2}}}
+2024-08-13 11:50:33,306 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:33,306 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-08-13 11:50:33,306 INFO    SenderThread:119604 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-08-13 11:50:34,268 INFO    SenderThread:119604 [dir_watcher.py:finish():388] scan: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files
+2024-08-13 11:50:34,268 INFO    SenderThread:119604 [dir_watcher.py:finish():402] scan save: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/config.yaml config.yaml
+2024-08-13 11:50:34,268 INFO    SenderThread:119604 [dir_watcher.py:finish():402] scan save: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/conda-environment.yaml conda-environment.yaml
+2024-08-13 11:50:34,269 INFO    SenderThread:119604 [dir_watcher.py:finish():402] scan save: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-metadata.json wandb-metadata.json
+2024-08-13 11:50:34,269 INFO    SenderThread:119604 [dir_watcher.py:finish():402] scan save: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/requirements.txt requirements.txt
+2024-08-13 11:50:34,270 INFO    SenderThread:119604 [dir_watcher.py:finish():402] scan save: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log output.log
+2024-08-13 11:50:34,271 INFO    SenderThread:119604 [dir_watcher.py:finish():402] scan save: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json wandb-summary.json
+2024-08-13 11:50:34,273 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 10
+2024-08-13 11:50:34,273 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 11:50:34,273 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:34,274 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 10
+2024-08-13 11:50:34,275 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:34,275 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-08-13 11:50:34,275 INFO    SenderThread:119604 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-13 11:50:34,621 INFO    wandb-upload_1:119604 [upload_job.py:push():130] Uploaded file /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/config.yaml
+2024-08-13 11:50:34,669 INFO    wandb-upload_2:119604 [upload_job.py:push():130] Uploaded file /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/conda-environment.yaml
+2024-08-13 11:50:34,685 INFO    wandb-upload_4:119604 [upload_job.py:push():130] Uploaded file /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/wandb-summary.json
+2024-08-13 11:50:34,691 INFO    wandb-upload_0:119604 [upload_job.py:push():130] Uploaded file /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/requirements.txt
+2024-08-13 11:50:34,693 INFO    wandb-upload_3:119604 [upload_job.py:push():130] Uploaded file /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/files/output.log
+2024-08-13 11:50:34,893 INFO    Thread-11 (_thread_body):119604 [sender.py:transition_state():614] send defer: 11
+2024-08-13 11:50:34,893 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:34,894 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 11
+2024-08-13 11:50:34,894 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:34,894 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-08-13 11:50:34,894 INFO    SenderThread:119604 [file_pusher.py:join():175] waiting for file pusher
+2024-08-13 11:50:34,894 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 12
+2024-08-13 11:50:34,894 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:34,894 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 12
+2024-08-13 11:50:34,894 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:34,894 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-08-13 11:50:34,894 INFO    SenderThread:119604 [file_stream.py:finish():601] file stream finish called
+2024-08-13 11:50:35,095 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 11:50:35,344 INFO    SenderThread:119604 [file_stream.py:finish():605] file stream finish is done
+2024-08-13 11:50:35,344 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 13
+2024-08-13 11:50:35,344 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 11:50:35,344 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:35,344 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 13
+2024-08-13 11:50:35,344 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:35,344 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-08-13 11:50:35,344 INFO    SenderThread:119604 [sender.py:transition_state():614] send defer: 14
+2024-08-13 11:50:35,344 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: defer
+2024-08-13 11:50:35,344 INFO    HandlerThread:119604 [handler.py:handle_request_defer():184] handle defer: 14
+2024-08-13 11:50:35,345 DEBUG   SenderThread:119604 [sender.py:send():379] send: final
+2024-08-13 11:50:35,345 DEBUG   SenderThread:119604 [sender.py:send():379] send: footer
+2024-08-13 11:50:35,345 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: defer
+2024-08-13 11:50:35,345 INFO    SenderThread:119604 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-08-13 11:50:35,345 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 11:50:35,345 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 11:50:35,345 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: server_info
+2024-08-13 11:50:35,345 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: server_info
+2024-08-13 11:50:35,346 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-13 11:50:35,347 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: get_summary
+2024-08-13 11:50:35,347 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: sampled_history
+2024-08-13 11:50:35,347 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-13 11:50:35,470 DEBUG   SenderThread:119604 [sender.py:send_request():406] send_request: poll_exit
+2024-08-13 11:50:35,470 INFO    MainThread:119604 [wandb_run.py:_footer_history_summary_info():3991] rendering history
+2024-08-13 11:50:35,470 INFO    MainThread:119604 [wandb_run.py:_footer_history_summary_info():4023] rendering summary
+2024-08-13 11:50:35,470 INFO    MainThread:119604 [wandb_run.py:_footer_sync_info():3950] logging synced files
+2024-08-13 11:50:35,471 DEBUG   HandlerThread:119604 [handler.py:handle_request():158] handle_request: shutdown
+2024-08-13 11:50:35,471 INFO    HandlerThread:119604 [handler.py:finish():882] shutting down handler
+2024-08-13 11:50:36,347 INFO    WriterThread:119604 [datastore.py:close():296] close: /home/mmuhleth/discrete_diffusion_graph/wandb/run-20240813_113932-xu3bf469/run-xu3bf469.wandb
+2024-08-13 11:50:36,470 INFO    SenderThread:119604 [sender.py:finish():1608] shutting down sender
+2024-08-13 11:50:36,470 INFO    SenderThread:119604 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-13 11:50:36,470 INFO    SenderThread:119604 [file_pusher.py:join():175] waiting for file pusher

@@ -162,35 +162,49 @@ def take_step(model_noise, init_adjs, noiselevel, device, grid_shape):
 
 
 
-def loss_cycle_consistency(model_noise, init_adjs, noiselevel,  device, grid_shape, lambda_cycle=0.1, lambda_conn=1, lambda_isolated=0.1):
+import networkx as nx
+import numpy as np
 
+def loss_cycle_consistency(model_noise, init_adjs, noiselevel, device, grid_shape, lambda_cycle=0.1, lambda_conn=1, lambda_isolated=0.1, lambda_edge=0.1, level=0.05):
     noisy_adjs, init_adjs = take_step(model_noise, init_adjs, noiselevel, device, grid_shape)
     batch_size, num_nodes, _ = init_adjs.shape
     total_loss = 0.0
+
+    # The expected number of edges for a spanning tree
+    expected_edges = grid_shape[0] ** 2 - 1
+
     for graph in init_adjs:
         conn_loss = 0.0
         isolated_loss = 0.0
         cycle_loss = 0.0
-        G = nx.from_numpy_matrix(graph.cpu().numpy())
-
-        if not nx.is_connected(G):
-
-            conn_loss = lambda_conn
-
-        cycles = nx.cycle_basis(G)
-        cycle_count = len(cycles)
-
-        cycle_loss = cycle_count * lambda_cycle
-
-
+        edge_loss = 0.0
         
-        for node in G.nodes():
-            if G.degree(node) == 0: 
-                isolated_loss += lambda_isolated
-        
-        total_loss += conn_loss + cycle_loss + isolated_loss
+        if noiselevel<level:
+            G = nx.from_numpy_array(graph.cpu().numpy())
+
+            # Penalize if the graph is not connected
+            if not nx.is_connected(G):
+                conn_loss = lambda_conn
+
+            # Penalize for the number of cycles
+            cycles = nx.cycle_basis(G)
+            cycle_count = len(cycles)
+            cycle_loss = cycle_count * lambda_cycle
+
+            # Penalize isolated nodes
+            for node in G.nodes():
+                if G.degree(node) == 0: 
+                    isolated_loss += lambda_isolated
+            
+            # Penalize for the number of edges differing from the expected number
+            num_edges = G.number_of_edges()
+            edge_loss = abs(num_edges - expected_edges) * lambda_edge
+
+        # Total loss for this graph
+        total_loss += conn_loss + cycle_loss + isolated_loss + edge_loss
 
     return total_loss / batch_size
+
 
 
 

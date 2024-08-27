@@ -1,0 +1,123 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:86: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/2000, Loss: 66.88107941172233
+New best model saved with loss: 66.88107941172233
+Epoch 2/2000, Loss: 50.055364604059015
+New best model saved with loss: 50.055364604059015
+Epoch 3/2000, Loss: 39.93316275518583
+New best model saved with loss: 39.93316275518583
+Epoch 4/2000, Loss: 36.474570424933184
+New best model saved with loss: 36.474570424933184
+Epoch 5/2000, Loss: 44.46290954790617
+Epoch 6/2000, Loss: 48.96252795749981
+Epoch 7/2000, Loss: 42.125966501079105
+Epoch 8/2000, Loss: 46.430970643696035
+Epoch 9/2000, Loss: 35.2796414992527
+New best model saved with loss: 35.2796414992527
+Epoch 10/2000, Loss: 40.59498265356218
+Epoch 11/2000, Loss: 37.96834609853594
+Epoch 12/2000, Loss: 36.96863635590202
+Epoch 13/2000, Loss: 34.65741170089888
+New best model saved with loss: 34.65741170089888
+Epoch 14/2000, Loss: 33.267252800496
+New best model saved with loss: 33.267252800496
+Epoch 15/2000, Loss: 33.005257000362406
+New best model saved with loss: 33.005257000362406
+Epoch 16/2000, Loss: 31.883946117601898
+New best model saved with loss: 31.883946117601898
+Epoch 17/2000, Loss: 43.53070946743614
+Epoch 18/2000, Loss: 34.07320333870226
+Epoch 19/2000, Loss: 46.22563718494616
+Epoch 20/2000, Loss: 35.66811862744783
+Epoch 21/2000, Loss: 43.48368172896536
+Epoch 22/2000, Loss: 43.852611340974505
+Epoch 23/2000, Loss: 39.183418123345625
+Epoch 24/2000, Loss: 46.30498083014237
+Epoch 25/2000, Loss: 38.936609067414935
+Epoch 26/2000, Loss: 43.030328580325374
+Epoch 27/2000, Loss: 48.19396405470999
+Epoch 28/2000, Loss: 36.85185537840191
+Epoch 29/2000, Loss: 38.45688167371248
+Epoch 30/2000, Loss: 52.52511592885774
+Epoch 31/2000, Loss: 41.325540195072165
+Epoch 32/2000, Loss: 50.98857252221359
+Epoch 33/2000, Loss: 41.66239773599725
+Epoch 34/2000, Loss: 37.283431676265444
+Epoch 35/2000, Loss: 40.07820360284103
+Epoch 36/2000, Loss: 45.35710350933828
+Epoch 37/2000, Loss: 34.125796436577254
+Epoch 38/2000, Loss: 35.88875774019643
+Epoch 39/2000, Loss: 27.462283531596
+New best model saved with loss: 27.462283531596
+Epoch 40/2000, Loss: 37.583799656872685
+Epoch 41/2000, Loss: 46.53054704164204
+Epoch 42/2000, Loss: 37.37346829866108
+Epoch 43/2000, Loss: 34.44159994392019
+Epoch 44/2000, Loss: 38.29429922605816
+Epoch 45/2000, Loss: 45.030597285220495
+Epoch 46/2000, Loss: 35.68340582596628
+Epoch 47/2000, Loss: 38.67299165223774
+Epoch 48/2000, Loss: 36.051480226610835
+Epoch 49/2000, Loss: 41.15697087739643
+Epoch 50/2000, Loss: 35.89900127440495
+Epoch 51/2000, Loss: 35.55184656028685
+Epoch 52/2000, Loss: 42.06200181477164
+Epoch 53/2000, Loss: 34.67357536238667
+Epoch 54/2000, Loss: 32.015136474743485
+Epoch 55/2000, Loss: 33.94067402311454
+Epoch 56/2000, Loss: 36.73012517627917
+Epoch 57/2000, Loss: 30.23122501373291
+Epoch 58/2000, Loss: 50.22535516772615
+Epoch 59/2000, Loss: 41.08885022213585
+Epoch 60/2000, Loss: 38.835914963170104
+Epoch 61/2000, Loss: 39.69356305975663
+Epoch 62/2000, Loss: 37.56737924876966
+Epoch 63/2000, Loss: 30.65224031055052
+Epoch 64/2000, Loss: 34.94062544170179
+Epoch 65/2000, Loss: 41.909376897309954
+Epoch 66/2000, Loss: 38.88330489411754
+Epoch 67/2000, Loss: 39.02545301537765
+Epoch 68/2000, Loss: 44.90955558576082
+Epoch 69/2000, Loss: 35.65188424102962
+Epoch 70/2000, Loss: 44.90941971226742
+Epoch 71/2000, Loss: 42.99369581122147
+Epoch 72/2000, Loss: 47.140422469691224
+Epoch 73/2000, Loss: 43.05648617995413
+Epoch 74/2000, Loss: 35.70995611893503
+Epoch 75/2000, Loss: 35.76208735365225
+Epoch 76/2000, Loss: 41.998947394521615
+Epoch 77/2000, Loss: 30.26760626701932
+Epoch 78/2000, Loss: 38.956714273675495
+Epoch 79/2000, Loss: 35.66776734816008
+Epoch 80/2000, Loss: 33.36785932757745
+Epoch 81/2000, Loss: 42.57259641288731
+Epoch 82/2000, Loss: 34.07278017194844
+Epoch 83/2000, Loss: 35.17275142669678
+Epoch 84/2000, Loss: 37.78266268625463
+Epoch 85/2000, Loss: 45.84646501352913
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=2000, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 50, in fit
+    score_batch = model(A=A, node_features=train_noise_adj_b_chunked[i].to(device), mask=mask, noiselevel=sigma.item()).to(device)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 262, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 312, in forward_cat
+    u = masked_instance_norm2D(u, mask)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/util/model_helper.py", line 182, in masked_instance_norm2D
+    mean = (torch.sum(x * mask, dim=[1,2]) / torch.sum(mask, dim=[1,2]))   # (N,C)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Epoch 86/2000, Loss: 25.499489325735915
+New best model saved with loss: 25.499489325735915

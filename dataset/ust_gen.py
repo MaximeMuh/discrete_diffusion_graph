@@ -63,13 +63,16 @@ def main():
     """
     Main function to generate, save, and visualize uniform spanning trees.
     """
-    num_graphs = 1000
-    grid_size = 5
-    filename = 'dataset/usts_5.pkl'
+    num_graphs = 300
+    grid_size = 10
+    filename = 'dataset/usts_10.pkl'
     
     ust_list = generate_multiple_ust(num_graphs, grid_size)
     save_graphs(filename, ust_list)
-    
+    print("done")
+    print(ust_list[6])
+    print(type(ust_list[0]))
+    visualize_graph(ust_list[0], "Sample Uniform Spanning Tree")
     if ust_list:
         visualize_graph(ust_list[0], "Sample Uniform Spanning Tree")
     else:

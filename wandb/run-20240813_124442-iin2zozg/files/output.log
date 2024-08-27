@@ -1,0 +1,159 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:86: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/2000, Loss: 0.1660439372062683
+New best model saved with loss: 0.1660439372062683
+Epoch 2/2000, Loss: 0.01739760326515687
+New best model saved with loss: 0.01739760326515687
+Epoch 3/2000, Loss: 0.01742822941588728
+Epoch 4/2000, Loss: 0.01592079657865198
+New best model saved with loss: 0.01592079657865198
+Epoch 5/2000, Loss: 0.016072553876591355
+Epoch 6/2000, Loss: 0.015829840674996376
+New best model saved with loss: 0.015829840674996376
+Epoch 7/2000, Loss: 0.01683437299767607
+Epoch 8/2000, Loss: 0.015969308387292058
+Epoch 9/2000, Loss: 0.015785557855116695
+New best model saved with loss: 0.015785557855116695
+Epoch 10/2000, Loss: 0.01593578959766187
+Epoch 11/2000, Loss: 0.016117245596098274
+Epoch 12/2000, Loss: 0.015439315159854135
+New best model saved with loss: 0.015439315159854135
+Epoch 13/2000, Loss: 0.015557989331060335
+Epoch 14/2000, Loss: 0.015303772580074636
+New best model saved with loss: 0.015303772580074636
+Epoch 15/2000, Loss: 0.014762887682177518
+New best model saved with loss: 0.014762887682177518
+Epoch 16/2000, Loss: 0.016017980138330085
+Epoch 17/2000, Loss: 0.01535431334846898
+Epoch 18/2000, Loss: 0.015297862603084036
+Epoch 19/2000, Loss: 0.015059021056482666
+Epoch 20/2000, Loss: 0.014934890658447617
+Epoch 21/2000, Loss: 0.01578258080898147
+Epoch 22/2000, Loss: 0.015391726291885502
+Epoch 23/2000, Loss: 0.01503050087117835
+Epoch 24/2000, Loss: 0.015419597100270422
+Epoch 25/2000, Loss: 0.014228309896823606
+New best model saved with loss: 0.014228309896823606
+Epoch 26/2000, Loss: 0.014633707996261748
+Epoch 27/2000, Loss: 0.015399873550785216
+Epoch 28/2000, Loss: 0.014693309160831728
+Epoch 29/2000, Loss: 0.01543143146524304
+Epoch 30/2000, Loss: 0.014259208336864648
+Epoch 31/2000, Loss: 0.01477913553581426
+Epoch 32/2000, Loss: 0.015394685201739011
+Epoch 33/2000, Loss: 0.01473332245491053
+Epoch 34/2000, Loss: 0.01409709674159163
+New best model saved with loss: 0.01409709674159163
+Epoch 35/2000, Loss: 0.014679258542233392
+Epoch 36/2000, Loss: 0.01569671928882599
+Epoch 37/2000, Loss: 0.015246560502993433
+Epoch 38/2000, Loss: 0.014577362686395645
+Epoch 39/2000, Loss: 0.015226732645379869
+Epoch 40/2000, Loss: 0.014929605010700854
+Epoch 41/2000, Loss: 0.014943722488456651
+Epoch 42/2000, Loss: 0.014885901179360716
+Epoch 43/2000, Loss: 0.014505292583060892
+Epoch 44/2000, Loss: 0.01392218230390235
+New best model saved with loss: 0.01392218230390235
+Epoch 45/2000, Loss: 0.014756689681426474
+Epoch 46/2000, Loss: 0.01518440476961826
+Epoch 47/2000, Loss: 0.01507166787785919
+Epoch 48/2000, Loss: 0.014584566025357498
+Epoch 49/2000, Loss: 0.015109542414153876
+Epoch 50/2000, Loss: 0.015234885835333875
+Epoch 51/2000, Loss: 0.014819898054395852
+Epoch 52/2000, Loss: 0.014611260230211835
+Epoch 53/2000, Loss: 0.014765176971099879
+Epoch 54/2000, Loss: 0.015114979034191683
+Epoch 55/2000, Loss: 0.014827455001834192
+Epoch 56/2000, Loss: 0.014967065402551702
+Epoch 57/2000, Loss: 0.014887122829493723
+Epoch 58/2000, Loss: 0.015430353630922343
+Epoch 59/2000, Loss: 0.015065162883777367
+Epoch 60/2000, Loss: 0.015347552583797983
+Epoch 61/2000, Loss: 0.014869106639372675
+Epoch 62/2000, Loss: 0.014455480844174562
+Epoch 63/2000, Loss: 0.014786796350228159
+Epoch 64/2000, Loss: 0.015367949528521612
+Epoch 65/2000, Loss: 0.014790676142040052
+Epoch 66/2000, Loss: 0.015125791395181104
+Epoch 67/2000, Loss: 0.014715745260840967
+Epoch 68/2000, Loss: 0.01436384850622792
+Epoch 69/2000, Loss: 0.014761955477297306
+Epoch 70/2000, Loss: 0.014850156087624399
+Epoch 71/2000, Loss: 0.014678694601905974
+Epoch 72/2000, Loss: 0.014672570126621346
+Epoch 73/2000, Loss: 0.014482069025306325
+Epoch 74/2000, Loss: 0.01514611927498328
+Epoch 75/2000, Loss: 0.015038533822486275
+Epoch 76/2000, Loss: 0.014550016849840941
+Epoch 77/2000, Loss: 0.014669976932437797
+Epoch 78/2000, Loss: 0.0152623592630813
+Epoch 79/2000, Loss: 0.01472204261900563
+Epoch 80/2000, Loss: 0.014402499226363082
+Epoch 81/2000, Loss: 0.014879160756735425
+Epoch 82/2000, Loss: 0.015277393309301451
+Epoch 83/2000, Loss: 0.014844229935031188
+Epoch 84/2000, Loss: 0.01423049100527638
+Epoch 85/2000, Loss: 0.014231416004660883
+Epoch 86/2000, Loss: 0.01536976423506674
+Epoch 87/2000, Loss: 0.014852090493628853
+Epoch 88/2000, Loss: 0.014595708025521353
+Epoch 89/2000, Loss: 0.01466984326313985
+Epoch 90/2000, Loss: 0.01451083914817948
+Epoch 91/2000, Loss: 0.01477773869900327
+Epoch 92/2000, Loss: 0.014975191142998244
+Epoch 93/2000, Loss: 0.014603118069077792
+Epoch 94/2000, Loss: 0.014656684459432176
+Epoch 95/2000, Loss: 0.015431431318192105
+Epoch 96/2000, Loss: 0.015237733623699137
+Epoch 97/2000, Loss: 0.014623538689001611
+Epoch 98/2000, Loss: 0.015128049950458501
+Epoch 99/2000, Loss: 0.015645262638204975
+Epoch 100/2000, Loss: 0.014385220937822995
+Epoch 101/2000, Loss: 0.014917676533131223
+Epoch 102/2000, Loss: 0.015008180206151385
+Epoch 103/2000, Loss: 0.01498561470132125
+Epoch 104/2000, Loss: 0.015268317619828801
+Epoch 105/2000, Loss: 0.015781401362466186
+Epoch 106/2000, Loss: 0.01518251604743694
+Epoch 107/2000, Loss: 0.014934806202195193
+Epoch 108/2000, Loss: 0.014852520078420639
+Epoch 109/2000, Loss: 0.014718353797338511
+Epoch 110/2000, Loss: 0.014236411030747388
+Epoch 111/2000, Loss: 0.014826828466826364
+Epoch 112/2000, Loss: 0.014505138767785147
+Epoch 113/2000, Loss: 0.014595192268882928
+Epoch 114/2000, Loss: 0.015020061333320643
+Epoch 115/2000, Loss: 0.014556059564806913
+Epoch 116/2000, Loss: 0.014805456182282222
+Epoch 117/2000, Loss: 0.015626014210283756
+Epoch 118/2000, Loss: 0.015513684159438861
+Epoch 119/2000, Loss: 0.015302847923808977
+Epoch 120/2000, Loss: 0.01524708199461824
+Epoch 121/2000, Loss: 0.014593687888823058
+Epoch 122/2000, Loss: 0.014628557537339236
+Epoch 123/2000, Loss: 0.015268021067114253
+Epoch 124/2000, Loss: 0.014934749930704894
+Epoch 125/2000, Loss: 0.01511078058300834
+Epoch 126/2000, Loss: 0.014832355719255773
+Epoch 127/2000, Loss: 0.015246217335133176
+Epoch 128/2000, Loss: 0.015459595983357806
+Epoch 129/2000, Loss: 0.01523585450884543
+Epoch 130/2000, Loss: 0.014683036525782785
+Epoch 131/2000, Loss: 0.015054965832907902
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=2000, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 56, in fit
+    l.backward()
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/_tensor.py", line 525, in backward
+    torch.autograd.backward(
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/autograd/__init__.py", line 267, in backward
+    _engine_run_backward(
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

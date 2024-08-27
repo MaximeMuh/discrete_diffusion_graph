@@ -1,0 +1,79 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:86: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/2000, Loss: 32.301485561189196
+New best model saved with loss: 32.301485561189196
+Epoch 2/2000, Loss: 29.85211211916
+New best model saved with loss: 29.85211211916
+Epoch 3/2000, Loss: 30.19221417866056
+Epoch 4/2000, Loss: 30.784974052792503
+Epoch 5/2000, Loss: 30.45232663835798
+Epoch 6/2000, Loss: 30.496371435740638
+Epoch 7/2000, Loss: 30.36807291848319
+Epoch 8/2000, Loss: 31.290135580395894
+Epoch 9/2000, Loss: 30.84555641053215
+Epoch 10/2000, Loss: 30.412702757214742
+Epoch 11/2000, Loss: 30.896266589089045
+Epoch 12/2000, Loss: 30.724809797983323
+Epoch 13/2000, Loss: 30.704014929514084
+Epoch 14/2000, Loss: 30.64648325481112
+Epoch 15/2000, Loss: 30.659966044955784
+Epoch 16/2000, Loss: 30.674165665157258
+Epoch 17/2000, Loss: 31.135685209244016
+Epoch 18/2000, Loss: 30.53101312546503
+Epoch 19/2000, Loss: 30.227339456951807
+Epoch 20/2000, Loss: 30.886185782296316
+Epoch 21/2000, Loss: 31.271008536929177
+Epoch 22/2000, Loss: 31.19768009488545
+Epoch 23/2000, Loss: 30.945063469901918
+Epoch 24/2000, Loss: 30.41314561026437
+Epoch 25/2000, Loss: 30.948292202419704
+Epoch 26/2000, Loss: 30.475285575503396
+Epoch 27/2000, Loss: 30.918242787557936
+Epoch 28/2000, Loss: 30.305672479054284
+Epoch 29/2000, Loss: 30.934178730798145
+Epoch 30/2000, Loss: 30.949989742702908
+Epoch 31/2000, Loss: 31.15490648481581
+Epoch 32/2000, Loss: 30.91702253856356
+Epoch 33/2000, Loss: 30.645260674612864
+Epoch 34/2000, Loss: 30.667752841162304
+Epoch 35/2000, Loss: 30.824373941572887
+Epoch 36/2000, Loss: 30.55790907239157
+Epoch 37/2000, Loss: 30.762251687428307
+Epoch 38/2000, Loss: 31.012658437093098
+Epoch 39/2000, Loss: 30.946326543414404
+Epoch 40/2000, Loss: 30.618101498437305
+Epoch 41/2000, Loss: 30.993854462154328
+Epoch 42/2000, Loss: 30.975305193946475
+Epoch 43/2000, Loss: 30.751176077222066
+Epoch 44/2000, Loss: 30.495567321777344
+Epoch 45/2000, Loss: 31.50418411739289
+Epoch 46/2000, Loss: 31.3137667065575
+Epoch 47/2000, Loss: 30.65096285986522
+Epoch 48/2000, Loss: 30.573570190914094
+Epoch 49/2000, Loss: 30.984626558091904
+Epoch 50/2000, Loss: 30.489082926795597
+Epoch 51/2000, Loss: 30.7861812531002
+Epoch 52/2000, Loss: 30.63540337577699
+Epoch 53/2000, Loss: 31.060719898768834
+Epoch 54/2000, Loss: 31.075308330475337
+Epoch 55/2000, Loss: 30.521405416821676
+Epoch 56/2000, Loss: 30.70519404941135
+Epoch 57/2000, Loss: 30.284760202680314
+Epoch 58/2000, Loss: 31.160887339758496
+Epoch 59/2000, Loss: 30.70545618874686
+Epoch 60/2000, Loss: 30.32568577357701
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=2000, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 56, in fit
+    l.backward()
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/_tensor.py", line 525, in backward
+    torch.autograd.backward(
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/autograd/__init__.py", line 267, in backward
+    _engine_run_backward(
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

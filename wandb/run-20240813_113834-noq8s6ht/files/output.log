@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=2000, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 52, in fit
+    l += loss_cycle_consistency(score_batch.squeeze(-1), A, sigma.item(), device, grid_shape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py", line 174, in loss_cycle_consistency
+    G = nx.from_numpy_matrix(graph.cpu().numpy())
+        ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'networkx' has no attribute 'from_numpy_matrix'

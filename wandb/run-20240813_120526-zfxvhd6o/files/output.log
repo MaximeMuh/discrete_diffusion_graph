@@ -1,0 +1,108 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:86: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/2000, Loss: 17.04686496446007
+New best model saved with loss: 17.04686496446007
+Epoch 2/2000, Loss: 8.076863044186643
+New best model saved with loss: 8.076863044186643
+Epoch 3/2000, Loss: 6.590636195811002
+New best model saved with loss: 6.590636195811002
+Epoch 4/2000, Loss: 6.569234470003529
+New best model saved with loss: 6.569234470003529
+Epoch 5/2000, Loss: 5.841846171178315
+New best model saved with loss: 5.841846171178315
+Epoch 6/2000, Loss: 5.290056797920873
+New best model saved with loss: 5.290056797920873
+Epoch 7/2000, Loss: 5.189288291050808
+New best model saved with loss: 5.189288291050808
+Epoch 8/2000, Loss: 5.589356419091162
+Epoch 9/2000, Loss: 5.1156086700625325
+New best model saved with loss: 5.1156086700625325
+Epoch 10/2000, Loss: 6.51027558008699
+Epoch 11/2000, Loss: 5.925834174022863
+Epoch 12/2000, Loss: 6.751922298173763
+Epoch 13/2000, Loss: 5.846311224918616
+Epoch 14/2000, Loss: 4.3734486946149875
+New best model saved with loss: 4.3734486946149875
+Epoch 15/2000, Loss: 6.098735200731378
+Epoch 16/2000, Loss: 5.562538695472636
+Epoch 17/2000, Loss: 4.594404327241998
+Epoch 18/2000, Loss: 5.9886296485599715
+Epoch 19/2000, Loss: 5.746740372557389
+Epoch 20/2000, Loss: 6.988870986492226
+Epoch 21/2000, Loss: 6.615122017107512
+Epoch 22/2000, Loss: 5.946054545476248
+Epoch 23/2000, Loss: 6.157203313649485
+Epoch 24/2000, Loss: 5.226210996214497
+Epoch 25/2000, Loss: 6.057154221313172
+Epoch 26/2000, Loss: 5.388812610977574
+Epoch 27/2000, Loss: 5.541577778364482
+Epoch 28/2000, Loss: 6.0047163084933635
+Epoch 29/2000, Loss: 5.320150530455928
+Epoch 30/2000, Loss: 6.351371194186964
+Epoch 31/2000, Loss: 6.593371614911838
+Epoch 32/2000, Loss: 6.7145357382924935
+Epoch 33/2000, Loss: 7.461857400442424
+Epoch 34/2000, Loss: 5.930659647050657
+Epoch 35/2000, Loss: 6.141158436474047
+Epoch 36/2000, Loss: 6.709386959034753
+Epoch 37/2000, Loss: 6.0576615365908335
+Epoch 38/2000, Loss: 4.7254857261125975
+Epoch 39/2000, Loss: 7.793213674896641
+Epoch 40/2000, Loss: 6.815552924808703
+Epoch 41/2000, Loss: 8.772775843641476
+Epoch 42/2000, Loss: 8.219399514951204
+Epoch 43/2000, Loss: 6.7147963255839915
+Epoch 44/2000, Loss: 5.646274885554847
+Epoch 45/2000, Loss: 4.268349276365418
+New best model saved with loss: 4.268349276365418
+Epoch 46/2000, Loss: 5.177926074909537
+Epoch 47/2000, Loss: 6.5463690191605375
+Epoch 48/2000, Loss: 7.352324410488731
+Epoch 49/2000, Loss: 5.725273691804001
+Epoch 50/2000, Loss: 5.536011399358119
+Epoch 51/2000, Loss: 7.251708394602725
+Epoch 52/2000, Loss: 4.536846684635077
+Epoch 53/2000, Loss: 7.3144871184700415
+Epoch 54/2000, Loss: 6.578309887137852
+Epoch 55/2000, Loss: 5.9305411458603645
+Epoch 56/2000, Loss: 6.199185710204275
+Epoch 57/2000, Loss: 6.340624135281694
+Epoch 58/2000, Loss: 5.731002569198608
+Epoch 59/2000, Loss: 6.27784862643794
+Epoch 60/2000, Loss: 5.520357803294533
+Epoch 61/2000, Loss: 6.825248668068333
+Epoch 62/2000, Loss: 5.241249448374698
+Epoch 63/2000, Loss: 6.314768527683459
+Epoch 64/2000, Loss: 5.852298491879513
+Epoch 65/2000, Loss: 5.646413125489888
+Epoch 66/2000, Loss: 5.336664455011487
+Epoch 67/2000, Loss: 6.830326296781239
+Epoch 68/2000, Loss: 5.773223801663048
+Epoch 69/2000, Loss: 5.709713797820242
+Epoch 70/2000, Loss: 5.805044214976461
+Epoch 71/2000, Loss: 7.777861645347194
+Epoch 72/2000, Loss: 5.220036599000818
+Epoch 73/2000, Loss: 4.936137393018917
+Epoch 74/2000, Loss: 6.509663169713397
+Epoch 75/2000, Loss: 5.91972374278856
+Epoch 76/2000, Loss: 6.319452800248799
+Epoch 77/2000, Loss: 6.357161753369789
+Epoch 78/2000, Loss: 5.89941846696954
+Epoch 79/2000, Loss: 6.656756281852722
+Epoch 80/2000, Loss: 6.751258009358456
+Epoch 81/2000, Loss: 6.341074291028474
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=2000, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 56, in fit
+    l.backward()
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/_tensor.py", line 525, in backward
+    torch.autograd.backward(
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/autograd/__init__.py", line 267, in backward
+    _engine_run_backward(
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

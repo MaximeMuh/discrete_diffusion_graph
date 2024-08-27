@@ -1,0 +1,110 @@
+/home/mmuhleth/discrete_diffusion_graph/utils/graphs.py:86: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  loss_matrix = loss_matrix * (1-2*torch.tensor(sigma_list).unsqueeze(-1).unsqueeze(-2).expand(grad_log_q_noise_list.size(0),grad_log_q_noise_list.size(1),grad_log_q_noise_list.size(2)).to(device)+1.0/len(sigma_list))
+/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch 1/2000, Loss: 91.07734128048546
+New best model saved with loss: 91.07734128048546
+Epoch 2/2000, Loss: 23.01783921844081
+New best model saved with loss: 23.01783921844081
+Epoch 3/2000, Loss: 13.75419591347638
+New best model saved with loss: 13.75419591347638
+Epoch 4/2000, Loss: 17.121935041327227
+Epoch 5/2000, Loss: 11.911517233440751
+New best model saved with loss: 11.911517233440751
+Epoch 6/2000, Loss: 17.1215422800497
+Epoch 7/2000, Loss: 14.700234011599893
+Epoch 8/2000, Loss: 13.279331566520819
+Epoch 9/2000, Loss: 15.962410703399463
+Epoch 10/2000, Loss: 20.383907895339163
+Epoch 11/2000, Loss: 19.27860922763418
+Epoch 12/2000, Loss: 20.541424023477656
+Epoch 13/2000, Loss: 21.278505203657243
+Epoch 14/2000, Loss: 12.594343509623094
+Epoch 15/2000, Loss: 15.909966236666628
+Epoch 16/2000, Loss: 13.225919824387683
+Epoch 17/2000, Loss: 15.436388679633016
+Epoch 18/2000, Loss: 17.067736964476737
+Epoch 19/2000, Loss: 15.067691853171901
+Epoch 20/2000, Loss: 16.067820180991763
+Epoch 21/2000, Loss: 19.962508753726357
+Epoch 22/2000, Loss: 18.59394128032421
+Epoch 23/2000, Loss: 21.067677778633016
+Epoch 24/2000, Loss: 18.488313348669756
+Epoch 25/2000, Loss: 15.857023708914456
+Epoch 26/2000, Loss: 18.909722127412493
+Epoch 27/2000, Loss: 12.593725398967141
+Epoch 28/2000, Loss: 18.64671526457134
+Epoch 29/2000, Loss: 19.33034877096744
+Epoch 30/2000, Loss: 18.330317246286494
+Epoch 31/2000, Loss: 20.331090851833945
+Epoch 32/2000, Loss: 17.80438428176077
+Epoch 33/2000, Loss: 16.278273243653146
+Epoch 34/2000, Loss: 13.120478222244664
+Epoch 35/2000, Loss: 16.54125559957404
+Epoch 36/2000, Loss: 16.436229857469076
+Epoch 37/2000, Loss: 20.225305891497747
+Epoch 38/2000, Loss: 22.068096851047716
+Epoch 39/2000, Loss: 17.43607564976341
+Epoch 40/2000, Loss: 17.172657634082594
+Epoch 41/2000, Loss: 17.541238282856188
+Epoch 42/2000, Loss: 14.225097506110998
+Epoch 43/2000, Loss: 14.277948662050461
+Epoch 44/2000, Loss: 17.751370297646837
+Epoch 45/2000, Loss: 15.17329049752535
+Epoch 46/2000, Loss: 18.225970615093644
+Epoch 47/2000, Loss: 18.64659178703043
+Epoch 48/2000, Loss: 15.59399402661151
+Epoch 49/2000, Loss: 12.48867899659825
+Epoch 50/2000, Loss: 16.172625172491138
+Epoch 51/2000, Loss: 13.173158640238015
+Epoch 52/2000, Loss: 13.278839035253776
+Epoch 53/2000, Loss: 13.33094146377162
+Epoch 54/2000, Loss: 17.48880618496945
+Epoch 55/2000, Loss: 17.119727184897975
+Epoch 56/2000, Loss: 16.54122257232666
+Epoch 57/2000, Loss: 19.01468020991275
+Epoch 58/2000, Loss: 19.85632740823846
+Epoch 59/2000, Loss: 19.06783302549861
+Traceback (most recent call last):
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 104, in <module>
+    fit(model, optimizer, dataloader, max_epoch=2000, device=device)
+  File "/home/mmuhleth/discrete_diffusion_graph/train_ppgn/train_ppgn_simple_adj_neigh.py", line 50, in fit
+    score_batch = model(A=A, node_features=train_noise_adj_b_chunked[i].to(device), mask=mask, noiselevel=sigma.item()).to(device)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 262, in forward
+    out = self.forward_cat(A, node_features, mask, noiselevel)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 308, in forward_cat
+    u = conv(u, mask) + (u if self.residual else 0)
+        ^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/discrete_diffusion_graph/model/model2.py", line 61, in forward
+    out1 = self.m1(x).permute(0, 3, 1, 2) * mask  # batch, out_feat, N, N
+           ^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmuhleth/miniconda3/envs/py38/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

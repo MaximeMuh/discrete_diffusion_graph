@@ -13,8 +13,8 @@ from dataset.extract_graph import get_dataloader, get_dataloader_adj
 from model.model2 import Powerful
 from utils.graphs import discretenoise, loss_func_bce, upper_flatten_to_adj_matrix, adj_matrix_to_upper_flatten, discretenoise_neighbor, loss_func_bce_adj, discretenoise_adj, gen_list_of_data_single, gen_list_of_data_single_neigh, loss_cycle_consistency
 
-filename = 'dataset/usts_5.pkl'
-width, height = 5, 5
+filename = 'dataset/usts_10.pkl'
+width, height = 10,10
 batch_size = 16
 grid_shape = (width, height)
 dataloader = get_dataloader_adj(filename, width, height, batch_size)
@@ -28,7 +28,7 @@ def fit(model, optimizer, dataloader, max_epoch=20, device=device):
     optimizer.zero_grad()
     scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.95)
     best_loss = float('inf')
-    best_model_path = 'models_ppgn/best_model_adj_neigh_cycle_conn_5_2.pth'
+    best_model_path = 'models_ppgn/best_model_adj_neigh_cycle_conn_10_test_9.pth'
     
     for epoch in range(max_epoch):
         train_losses = []
@@ -49,7 +49,7 @@ def fit(model, optimizer, dataloader, max_epoch=20, device=device):
                 A = train_noise_adj_b_chunked[i].unsqueeze(0).to(device)
                 score_batch = model(A=A, node_features=train_noise_adj_b_chunked[i].to(device), mask=mask, noiselevel=sigma.item()).to(device)
                 score.append(score_batch)
-                l += loss_cycle_consistency(score_batch.squeeze(-1), A, sigma.item(), device, grid_shape)
+                l += loss_cycle_consistency(score_batch.squeeze(-1), A, sigma.item(), device, grid_shape, lambda_cycle=10, lambda_conn=20, lambda_isolated=0, lambda_edge=0, level=0.05)
             score = torch.cat(score, dim=0).squeeze(-1).to(device)
             l += loss_func_bce_adj(score, torch.stack(grad_log_noise_adj_list), sigma_list, device)
             
