@@ -1,3 +1,10 @@
+# paper Haefeli, K. K., Martinkus, K., Perraudin, N., & Wattenhofer, R. (2023). Diffusion models for graphs benefit from discrete state spaces. arXiv preprint arXiv:2210.01549. 
+# https://doi.org/10.48550/arXiv.2210.01549
+# github https://github.com/kilianhae/discrete_DPPM_Graphs
+
+
+
+
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
